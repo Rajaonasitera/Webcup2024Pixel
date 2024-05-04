@@ -8,7 +8,7 @@
 	
 	<main>		
         <!-- Preloader -->
-        <?php include("Loading.php"); ?>
+        <?php include("loading.php"); ?>
        
         <!--/Preloader -->     
         
@@ -18,7 +18,7 @@
         <div id="clapat-page-content" class="light-content" data-bgcolor="#0c0c0c">
             
             <!-- Header -->
-           <?php include("content/Menu.php"); ?>
+           <?php include("content/menu.php"); ?>
             
                 
             <!-- Content Scroll -->
@@ -60,9 +60,19 @@ Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy
                     </div>           
                     <div id="hero-image-wrapper">
                     	<div id="hero-background-layer" class="parallax-scroll-image">
-                            <div id="hero-bg-image" style="background-image:url(<?=base_url("assets/images/knowhere_back.jpg")?>)"></div>
+                            <div id="hero-bg-image" style="background-image:url(images/04hero.jpg)">
+                            	<div class="hero-video-wrapper">
+                                    <video loop muted playsinline class="bgvid">
+                                        <source src="<?=base_url("assets/images/landing_knowhere.mp4")?>" type="video/mp4">
+                                    </video>
+                                    <audio autoplay>
+                    <source src="<?=base_url("assets/images/landing_knowhere.mp3")?>" type="audio/mpeg">
+                    <!-- Inclure des sources audio supplémentaires ici pour une meilleure compatibilité -->
+                </audio>
+                                </div>
+                            </div>
                         </div>
-                    </div>                     
+                    </div>                              
                     <!--/Hero Section -->
                     
                     
@@ -210,9 +220,9 @@ Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy
                                                         <img src="<?=base_url("assets/images/formation.jpg")?>" class="grid__item-img grid__item-img--large" alt="">                              
                                                     </div>
                                                     <div class="slide-caption trigger-item-link-secondary">
-                                                        <div class="slide-title primary-font-title"><span>Formation</span></div>                                                    
-                                                        <div class="slide-date"><span>02</span></div>
-                                                        <div class="slide-cat"><span>Service</span></div>                                      
+                                                        <div class="slide-title primary-font-title"><span>Fonctionnalite 2</span></div>                                                    
+                                                        <div class="slide-date"><span>2024</span></div>
+                                                        <div class="slide-cat"><span>Photography</span></div>                                      
                                                     </div>
                                                 </div>
                                             </div>
@@ -222,9 +232,9 @@ Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy
                                                     <div class="img-mask">
                                                         <a class="slide-link" data-type="page-transition" href="<?=site_url("fo/fonctionnalite/f3")?>"></a>
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="<?=base_url("assets/images/progress_final.jpg")?>" class="item-image grid__item-img" alt="">
+                                                            <img src="<?=base_url("assets/images/progress.jpg")?>" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="<?=base_url("assets/images/progress_final.jpg")?>" class="grid__item-img grid__item-img--large" alt="">                              
+                                                        <img src="<?=base_url("assets/images/progress.jpg")?>" class="grid__item-img grid__item-img--large" alt="">                              
                                                     </div>
                                                     <div class="slide-caption trigger-item-link-secondary">
                                                         <div class="slide-title primary-font-title"><span>Fonctionnalite 3</span></div>                                                    
@@ -477,7 +487,7 @@ Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy
                 <!--/Main -->
                 
                 <!-- Footer -->
-                <?php include("content/Foot.php"); ?>
+                <?php include("content/foot.php"); ?>
                 <!--/Footer -->
             
         
@@ -511,7 +521,7 @@ Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy
     <div id="rotate-device"></div>
     
     
-    <?php include("content/Footer.php"); ?>
+    <?php include("content/footer.php"); ?>
    
 
 </body>

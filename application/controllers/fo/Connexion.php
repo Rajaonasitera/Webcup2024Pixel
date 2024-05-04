@@ -18,13 +18,22 @@ class Connexion extends CI_Controller {
 		$id_pays = $this -> input -> post('id_pays');
 		$email = $this -> input -> post('email');
 		$mdp = $this -> input -> post('mdp');
-		$pseudo = $this -> input -> post('pseudo');
 		$id_categorie = $this -> input -> post('id_categorie');
 
-		$id = $this -> Inscription -> subscription($nom_client, $genre, $dtn, $id_pays, $email, $mdp, $pseudo, $id_categorie);
+		$id = $this -> Inscription -> subscription($nom_client, $genre, $dtn, $id_pays, $email, $mdp, $id_categorie);
+
+		
 		// ATAO ANATY SESSION VE?? OUI ALOA
 
 		// REDIRECTION MAKANY AMIN LISTE DES FORMATIONS
+		redirect(base_url().'index.php/fo/fonctionnalite/f2/');
+	}
+
+	// INSCRIPTION PAGE
+	public function inscriptionPage(){
+		$data['categories'] = $this -> Inscription -> getCategories();
+		$data['pays'] = $this -> Inscription -> getPlanete();
+		$this->load->view('fo/inscription', $data);
 	}
 
 	

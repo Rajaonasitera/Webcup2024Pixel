@@ -146,78 +146,91 @@
                     <div class="form-container" style="margin: auto; background-color: #0c0c0c;">
                       <div class="logo-container">Inscription à Knowhere</div>
 
-                      <form class="form">
+                      <form 
+                        class="form"
+                        method="post"
+                        action="<?php echo site_url("fo/connexion/abonnement") ?>"  
+                      >
                         <div class="form-group">
                           <label for="nom">Nom</label>
                           <input
                             type="text"
                             id="nom"
-                            name="nom"
+                            name="nom_client"
                             placeholder="Entrer votre nom"
                             required=""
                             style="background-color: #fff;"
                           />
                         </div>
-                        <form class="form">
+
+                        <div class="form-group">
+                          <label for="dtn">Date de naissance</label>
+                          <input
+                            type="date"
+                            id="dtn"
+                            name="dtn"
+                            required=""
+                            style="background-color: #fff;"
+                          />
+                        </div>
+    
+                        <div class="form-group">
+                          <label for="email">Email</label>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required=""
+                            style="background-color: #fff;"
+                          />
+                        </div>
+        
+                          <div class="form-group">
+                            <label for="mdp">Mots de passe</label>
+                            <input
+                              type="password"
+                              id="mdp"
+                              name="mdp"
+                              placeholder="Enter your mdp"
+                              required=""
+                              style="background-color: #fff;"
+                            />
+                          </div>
+    
                             <div class="form-group">
-                              <label for="dtn">Date de naissance</label>
-                              <input
-                                type="date"
-                                id="dtn"
-                                name="dtn"
-                                placeholder="Enter your email"
-                                required=""
-                                style="background-color: #fff;"
-                              />
+                                <label >Genre</label>
+                                <select name="genre" id=""  style="height: 50px; border-color: #ccc; font-family: inherit;">
+                                    <option value="0"  style="height: 50px; border-color: #ccc; font-family: inherit;">Homme</option>
+                                    <option value="1"  style="height: 50px; border-color: #ccc;font-family: inherit;">Femme</option>
+                                </select>
                             </div>
-                            <form class="form">
-                                <div class="form-group">
-                                  <label for="email">Email</label>
-                                  <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    placeholder="Enter your email"
-                                    required=""
-                                    style="background-color: #fff;"
-                                  />
-                                </div>
-                                <form class="form">
-                                    <div class="form-group">
-                                      <label for="mdp">Mots de passe</label>
-                                      <input
-                                        type="password"
-                                        id="mdp"
-                                        name="mdp"
-                                        placeholder="Enter your mdp"
-                                        required=""
-                                        style="background-color: #fff;"
-                                      />
-                                    </div>
-                            <form class="form">
-                                <div class="form-group">
-                                    <label >Genre</label>
-                                    <select name="genre" id=""  style="height: 50px; border-color: #ccc; font-family: inherit;">
-                                        <option value="0"  style="height: 50px; border-color: #ccc; font-family: inherit;">Homme</option>
-                                        <option value="1"  style="height: 50px; border-color: #ccc;font-family: inherit;">Femme</option>
-                                    </select>
-                                </div>
-                                <form class="form">
-                                    <div class="form-group">
-                                        <label >Planete</label>
-                                        <select name="planete" id=""  style="height: 50px; border-color: #ccc;font-family: inherit;">
-                                            <option value="0"  style="height: 50px; border-color: #ccc;font-family: inherit;">Terre</option>
-                                            <option value="1"  style="height: 50px; border-color: #ccc;font-family: inherit;">Mars</option>
-                                        </select>
-                                    </div>
-                                    <form class="form">
-                                        <div class="form-group">
-                                            <label >Categorie</label>
-                                            <select name="categorie" id=""  style="height: 50px; border-color: #ccc;font-family: inherit;">
-                                                <option value="0"  style="height: 50px; border-color: #ccc;font-family: inherit;">Batmanien</option>
-                                                <option value="1"  style="height: 50px; border-color: #ccc;font-family: inherit;">Spider manien</option>
-                                            </select>
-                                        </div>
+        
+                            <div class="form-group">
+                                <label >Planete</label>
+                                <select name="id_pays" id=""  style="height: 50px; border-color: #ccc;font-family: inherit;">
+                                    <?php foreach($pays as $planete){ ?>
+                                      <option 
+                                        value="<?php echo $planete['id_pays'] ?>"  
+                                        style="height: 50px; border-color: #ccc;font-family: inherit;">
+                                          <?php echo $planete['nom_pays'] ?>
+                                      </option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+            
+                            <div class="form-group">
+                                <label >Categorie</label>
+                                <select name="id_categorie" id=""  style="height: 50px; border-color: #ccc;font-family: inherit;">
+                                  <?php foreach($categories as $categorie){ ?>
+                                    <option 
+                                      value="<?php echo $categorie['id_categorie'] ?>"  
+                                      style="height: 50px; border-color: #ccc;font-family: inherit;">
+                                      <?php echo $categorie['nom_categorie'] ?>
+                                    </option>
+                                    <?php } ?>
+                                </select>
+                            </div>
 
                         <button class="form-submit-btn" type="submit"  style="color: #0c0c0c;">
                           S'inscrire

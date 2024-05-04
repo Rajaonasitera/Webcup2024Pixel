@@ -51,14 +51,14 @@
                                         </h1>
                                    		<p><span class="has-opacity">
                                             Bravo ! Vous avez décroché votre billet pour devenir un véritable <b> <?php echo $categorie['nom_categorie'] ?> </b>. 
-                                            Explorez nos formations pour découvrir et développer vos talents extraordinaires et même rencontrer votre prof <b> <?php echo $categorie['nom_prof'] ?></b> 
+                                            Inscrivez vous et explorez nos formations pour découvrir et développer vos talents extraordinaires et même rencontrer votre prof <b> <?php echo $categorie['nom_prof'] ?></b> 
                                         </span></p>
                                            <div class="button-box text-align-center has-animation fadeout-element">  
-                                        <form action="<?=base_url("fo/inscription")?>" method="post">           
+                                        <form action="<?=base_url("fo/connexion/inscriptionPage")?>" method="post">           
                                     <div class="clapat-button-wrap parallax-wrap hide-ball">
                                         <div class="clapat-button parallax-element">
                                             <div  class="button-border outline rounded parallax-element-second">
-                                                <input type = "submit" class="" value="Charger" style="text-align:center;" />
+                                                <input type = "submit" class="" value="S'inscrire" style="text-align:center;" />
  
                                                 </div>
                                         </div>

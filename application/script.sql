@@ -8,11 +8,22 @@ create table pays(
 
 -- ------------------------------------------------------
 
+-- ---------- CATEGORIES DE POUVOIR 
+create table categorie(
+    id_categorie varchar(10) primary key,
+    nom_categorie varchar(50),
+    image_cat varchar(100),
+    image_prof varchar(100),        -- Image du prof
+    nom_prof varchar(100)           -- Nom de prof
+)ENGINE = InnoDB;
+
+-- --------------------------------------------------------
+
 -- UTILISATEURS
 
 create table client(
     id_client int auto_increment primary key,
-    nom_client varchar(100)
+    nom_client varchar(100),
     genre int,
     dtn date,
     id_pays varchar(50),
@@ -93,14 +104,7 @@ create table vente(
 
 -- --------------------- PIXEL -------------------------------------
 
--- ---------- CATEGORIES DE POUVOIR 
-create table categorie(
-    id_categorie varchar(10) primary key,
-    nom_categorie varchar(50),
-    image_cat varchar(100),
-    image_prof varchar(100),        -- Image du prof
-    nom_prof varchar(100)           -- Nom de prof
-)ENGINE = InnoDB;
+
 
 
 -- ------------ QUESTIONS POUR LES ORIENTATIONS

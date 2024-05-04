@@ -18,16 +18,16 @@ insert into categorie values('CAT6', 'BATMANIEN', 'categorie6.png', 'categorie6.
 -- -----------------------------------------
 
 -- UTILISATEURS
-insert into client values(158, 'Pixel', 'Me', 0, '2000-10-5', 'PAYS_1', 'pixel@gmail.com', 'pixel', 'Admin', 0, 'CAT1', 'Mon histoire');
-insert into client values(159, 'Rasoa', 'Nary', 1, '1995-10-5', 'PAYS_2', 'rasoa@gmail.com', 'rasoa', 'RASOA GIRL',1, 'CAT2', 'Mon histoire');
-insert into client values(160, 'Soa', 'Koto', 0, '1990-10-5', 'PAYS_3', 'soa@gmail.com', 'soa', 'KOTO MAN',1, 'CAT3', 'Mon histoire');
-insert into client values(161, 'Fy', 'Soa', 0, '1995-10-5', 'PAYS_4', 'fy@gmail.com', 'fy', 'WI-FY',1, 'CAT4', 'Mon histoire');
-insert into client values(162, 'Naivo', 'Raly', 1, '2005-10-5', 'PAYS_5', 'naivo@gmail.com', 'naivo', 'TRIMOBE',1, 'CAT5', 'Mon histoire');
-insert into client values(163, 'Velo', 'Rija', 1, '2001-10-5', 'PAYS_1', 'velo@gmail.com', 'velo', 'R3',1, 'CAT5', 'Mon histoire');
-insert into client values(164, 'Vololona', 'Koly', 0, '1998-10-5', 'PAYS_2', 'koly@gmail.com', 'koly', 'BOOGIMAN',1, 'CAT6', 'Mon histoire');
-insert into client values(165, 'Manja', 'Tefy', 0, '2002-10-5', 'PAYS_3', 'tefy@gmail.com', 'tefy', 'WRONG TURN',1, 'CAT1', 'Mon histoire');
-insert into client values(166, 'Tia', 'Koloina', 0, '1996-10-5', 'PAYS_4', 'tia@gmail.com', 'tia', 'DAFFY',1, 'CAT1', 'Mon histoire');
-insert into client values(167, 'Narivony', 'Rabe', 1, '1996-10-5', 'PAYS_5', 'rabe@gmail.com', 'rabe', 'TROZONA', 1, 'CAT2', 'Mon histoire');
+insert into client values(158, 'Pixel', 0, '2000-10-5', 'PAYS_1', 'pixel@gmail.com', 'pixel', 'Admin', 0, 'CAT1', 'Mon histoire');
+insert into client values(159, 'Rasoa', 1, '1995-10-5', 'PAYS_2', 'rasoa@gmail.com', 'rasoa', 'RASOA GIRL',1, 'CAT2', 'Mon histoire');
+insert into client values(160, 'Soa', 0, '1990-10-5', 'PAYS_3', 'soa@gmail.com', 'soa', 'KOTO MAN',1, 'CAT3', 'Mon histoire');
+insert into client values(161, 'Fy', 0, '1995-10-5', 'PAYS_4', 'fy@gmail.com', 'fy', 'WI-FY',1, 'CAT4', 'Mon histoire');
+insert into client values(162, 'Naivo', 1, '2005-10-5', 'PAYS_5', 'naivo@gmail.com', 'naivo', 'TRIMOBE',1, 'CAT5', 'Mon histoire');
+insert into client values(163, 'Velo', 1, '2001-10-5', 'PAYS_1', 'velo@gmail.com', 'velo', 'R3',1, 'CAT5', 'Mon histoire');
+insert into client values(164, 'Vololona', 0, '1998-10-5', 'PAYS_2', 'koly@gmail.com', 'koly', 'BOOGIMAN',1, 'CAT6', 'Mon histoire');
+insert into client values(165, 'Manja', 0, '2002-10-5', 'PAYS_3', 'tefy@gmail.com', 'tefy', 'WRONG TURN',1, 'CAT1', 'Mon histoire');
+insert into client values(166, 'Tia', 0, '1996-10-5', 'PAYS_4', 'tia@gmail.com', 'tia', 'DAFFY',1, 'CAT1', 'Mon histoire');
+insert into client values(167, 'Narivony', 1, '1996-10-5', 'PAYS_5', 'rabe@gmail.com', 'rabe', 'TROZONA', 1, 'CAT2', 'Mon histoire');
 
 
 -- SERVICES
