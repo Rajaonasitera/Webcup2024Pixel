@@ -20,6 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		redirect(base_url().'index.php/fo/welcome');
+		// redirect(base_url().'index.php/fo/welcome');
+		redirect(base_url().'index.php/fo/connexion/login/0');
 	}		
 }
