@@ -73,13 +73,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+
 $db['default'] = array(
-	'dsn'	=> 'mysql:host=localhost;port=3306;dbname=pixelme',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
+	'dsn'	=> '',
+	'hostname' => '172.30.40.14',
+	'username' => 'fits',
+	'password' => 'mimi',
 	'database' => 'pixelme',
-	'dbdriver' => 'pdo',
+	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
