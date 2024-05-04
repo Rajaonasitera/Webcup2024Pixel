@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-    <?php include("/../content/Header.php"); ?>
+    <?php include("/../content/header.php"); ?>
 
    
 </head>    
@@ -13,7 +13,7 @@
 	
 	<main>		
         <!-- Preloader -->
-        <?php include("/../Loading.php"); ?>
+        <?php include("/../loading.php"); ?>
 
         <!--/Preloader -->     
         
@@ -23,7 +23,7 @@
         <div id="clapat-page-content" class="light-content" data-bgcolor="#0c0c0c">
             
             <!-- Header -->
-           <?php include("/../content/Menu.php"); ?>
+           <?php include("/../content/menu.php"); ?>
             
             <!--/Header -->        
             
@@ -41,13 +41,18 @@
                                 <div class="pinned-section">
                                     <div class="scrolling-element left">
                                         <figure class="has-animation">
-                                            <a href="" class="image-link"><img src="<?=base_url("assets/images/matching/spiderman.jpg")?>" alt="Image Title"></a>
+                                            <a href="" class="image-link"><img src="<?=base_url("assets/images/matching/" . $categorie['image_cat'])?>" alt="Image Title"></a>
                                         </figure>
                                     </div>
                                     
                                     <div class="pinned-element right">
-                                        <h1 class="primary-font-title has-mask-fill">The Solution</h1>
-                                   		<p><span class="has-opacity">DEVELOPING ONLINE PRESENCES WHERE THE SOPHISTICATION OF VISUAL DESIGN MEETS THE CALCULATED SCIENCE OF PRODUCT SELLING.</span></p>
+                                        <h1 class="primary-font-title has-mask-fill">
+                                            Categorie <?php echo $categorie['nom_categorie'] ?>
+                                        </h1>
+                                   		<p><span class="has-opacity">
+                                            Bravo ! Vous avez décroché votre billet pour devenir un véritable <b> <?php echo $categorie['nom_categorie'] ?> </b>. 
+                                            Explorez nos formations pour découvrir et développer vos talents extraordinaires et même rencontrer votre prof <b> <?php echo $categorie['nom_prof'] ?></b> 
+                                        </span></p>
                                            <div class="button-box text-align-center has-animation fadeout-element">  
                                         <form action="<?=base_url("fo/inscription")?>" method="post">           
                                     <div class="clapat-button-wrap parallax-wrap hide-ball">
@@ -72,8 +77,7 @@
                 <!--/Main --> 
                 
                 
-                <!-- Footer -->
-                <?php include("/../content/Foot.php"); ?>
+
                 <!--/Footer -->
             
         
@@ -101,10 +105,8 @@
             <div class="hero-translate"></div>
         </div>
     <div id="rotate-device"></div>
-    
-    
-		
-    <?php include("/../content/Footer.php"); ?>
+
+    <?php include("/../content/footer.php"); ?>
 
 
 </body>

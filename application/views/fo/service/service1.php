@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-    <?php include("/../content/Header.php"); ?>
+    <?php include("/../content/header.php"); ?>
 
    
 </head>    
@@ -13,7 +13,7 @@
 	
 	<main>		
         <!-- Preloader -->
-        <?php include("/../Loading.php"); ?>
+        <?php include("/../loading.php"); ?>
 
         <!--/Preloader -->     
         
@@ -23,13 +23,9 @@
         <div id="clapat-page-content" class="light-content" data-bgcolor="#0c0c0c">
             
             <!-- Header -->
-           <?php include("/../content/Menu.php"); ?>
+           <?php include("/../content/menu.php"); ?>
             
             <!--/Header -->        
-            
-            
-             
-            
             
             <!-- Content Scroll -->
             <div id="content-scroll">
@@ -109,135 +105,50 @@ DÉCOUVRE TON ALTER EGO SUPER-HÉROÏQUE !</span></h2>
                                         <h2 class="big-title primary-font-title no-margins"><span class="has-mask-fill">3 questions</span><br><span class="has-mask-fill">heros!</span></h2>
                                     </div>
                                     <!-- ---------------------------- form ---------------------------------- -->
-                                    <form method="post" name="" action="<?=base_url("fo/fonctionnalite/reponse")?>">
+                                    <form method="post" name="" action="<?=base_url("fo/orientationCtrl/reponseOrientation")?>">
                                     <div class="scrolling-element right">
-                                    	<dl class="accordion has-animation">
-											<dt>
-												<span class="link"><div>question 1</div></span>
-												<div class="acc-icon-wrap parallax-wrap">
-													<div class="acc-button-icon parallax-element">
-														<i class="fa fa-arrow-right"></i>
-													</div>
-												</div>
-											</dt>
-                                            
-											<dd class="accordion-content">
-                                                <div style="display: flex; align-items: center; justify-content:space-between; width:100%;">
-                                                    <img src="<?=base_url("assets/images/qcm/r1.jpg")?>" alt="" style="width:150px; height:150px; margin-right:10px; margin-bottom:10px;">
-                                                    <p style="width: 300px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo est doloribus, ab voluptatum rerum labore,</p>
-                                                    <label class="custom-checkbox">
-                                                        <input name="question1" type="checkbox">
-                                                        <span class="checkmark"></span>
-                                                      </label>
-                                                      
-                                                </div>
-                                                <div style="display: flex; align-items: center; justify-content:space-between;">
-                                                    <img src="<?=base_url("assets/images/qcm/r2.jpg")?>" alt="" style="width:150px; height:150px; margin-right:10px; margin-bottom:10px;">
-                                                    <p style="width: 300px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo est doloribus, ab voluptatum rerum labore,</p>
-                                                    <label class="custom-checkbox">
-                                                        <input name="question1" type="checkbox">
-                                                        <span class="checkmark"></span>
-                                                      </label>
-                                                      
-                                                </div>
-                                                <div style="display: flex; align-items: center; justify-content:space-between;">
-                                                    <img src="<?=base_url("assets/images/qcm/r3.jpg")?>" alt="" style="width:150px; height:150px; margin-right:10px; margin-bottom:10px;">
-                                                    <p style="width: 300px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo est doloribus, ab voluptatum rerum labore,</p>
-                                                    <label class="custom-checkbox">
-                                                        <input name="question1" type="checkbox">
-                                                        <span class="checkmark"></span>
-                                                      </label>
-                                                      
-                                                </div>
+
+                                    <?php for ($j = 0; $j < count($questions); $j++) { ?>
+
+                                        
+                                            <dl class="accordion has-animation">
+                                                <dt>
+                                                    <span class="link"><div>
+                                                        <?php echo $questions[$j]['nom_question'] ?>
+                                                    </div></span>
+                                                    <div class="acc-icon-wrap parallax-wrap">
+                                                        <div class="acc-button-icon parallax-element">
+                                                            <i class="fa fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                </dt>
                                                 
-                                            </dd>
+                                                <dd class="accordion-content">
+                                                    <?php $responses = $this->Orientation->getReponsesQuestions($questions[$j]['id_question']); ?>
+                                                    <?php for ($i = 0; $i < count($responses); $i++) { ?>
+                                                        <div style="display: flex; align-items: center; justify-content:space-between; width:100%;">
+                                                            <img src="<?=base_url("assets/images/qcm/" . $responses[$i]['image_path'])?>" alt="" style="width:150px; height:150px; margin-right:10px; margin-bottom:10px;">
+                                                            <p style="width: 300px;">
+                                                                <?php echo $responses[$i]['nom_reponse']; ?>
+                                                            </p>
+                                                            <label class="custom-checkbox">
+                                                                <input name="question<?php echo $j ?>" value="<?php echo $responses[$i]['id_categorie'] ?>" type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>          
+                                                        </div>
+                                                    <?php } ?>  
+                                                </dd>
 
-											<dt>
-												<span class="link"><div>question 2</div></span>
-												<div class="acc-icon-wrap parallax-wrap">
-													<div class="acc-button-icon parallax-element">
-														<i class="fa fa-arrow-right"></i>
-													</div>
-												</div>
-											</dt>
-											<dd class="accordion-content">
-                                                    <div style="display: flex; align-items: center; justify-content:space-between;">
-                                                        <img src="<?=base_url("assets/images/qcm/r4.jpg")?>" alt="" style="width:150px; height:150px; margin-right:10px; margin-bottom:10px;">
-                                                        <p style="width: 300px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo est doloribus, ab voluptatum rerum labore,</p>
-                                                        <label class="custom-checkbox">
-                                                            <input name="question2" type="checkbox">
-                                                            <span class="checkmark"></span>
-                                                          </label>
-                                                          
-                                                    </div>
-                                                    <div style="display: flex; align-items: center; justify-content:space-between;">
-                                                        <img src="<?=base_url("assets/images/qcm/r5.jpg")?>" alt="" style="width:150px; height:150px; margin-right:10px; margin-bottom:10px;">
-                                                        <p style="width: 300px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo est doloribus, ab voluptatum rerum labore,</p>
-                                                        <label class="custom-checkbox">
-                                                            <input name="question2" type="checkbox">
-                                                            <span class="checkmark"></span>
-                                                          </label>
-                                                          
-                                                    </div>
-                                                    <div style="display: flex; align-items: center; justify-content:space-between;">
-                                                        <img src="<?=base_url("assets/images/qcm/r6.jpg")?>" alt="" style="width:150px; height:150px; margin-right:10px; margin-bottom:10px;">
-                                                        <p style="width: 300px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo est doloribus, ab voluptatum rerum labore,</p>
-                                                        <label class="custom-checkbox">
-                                                            <input name="question2" type="checkbox">
-                                                            <span class="checkmark"></span>
-                                                          </label>
-                                                          
-
-                                            </dd>
-
-											<dt>
-												<span class="link"><div>question 3</div></span>
-												<div class="acc-icon-wrap parallax-wrap">
-													<div class="acc-button-icon parallax-element">
-														<i class="fa fa-arrow-right"></i>
-													</div>
-												</div>
-											</dt>
-											<dd class="accordion-content">
-                                                    <div style="display: flex; align-items: center; justify-content:space-between;">
-                                                        <img src="<?=base_url("assets/images/qcm/r7.jpg")?>" alt="" style="width:150px; height:150px; margin-right:10px; margin-bottom:10px;">
-                                                        <p style="width: 300px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo est doloribus, ab voluptatum rerum labore,</p>
-                                                        <label class="custom-checkbox">
-                                                            <input name="question3" type="checkbox">
-                                                            <span class="checkmark"></span>
-                                                          </label>
-                                                          
-                                                    </div>
-                                                    <div style="display: flex; align-items: center; justify-content:space-between;">
-                                                        <img src="<?=base_url("assets/images/qcm/r8.jpg")?>" alt="" style="width:150px; height:150px; margin-right:10px; margin-bottom:10px;">
-                                                        <p style="width: 300px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo est doloribus, ab voluptatum rerum labore,</p>
-                                                        <label class="custom-checkbox">
-                                                            <input name="question3" type="checkbox">
-                                                            <span class="checkmark"></span>
-                                                          </label>
-                                                          
-                                                    </div>
-                                                    <div style="display: flex; align-items: center; justify-content:space-between;">
-                                                        <img src="<?=base_url("assets/images/qcm/r9.jpg")?>" alt="" style="width:150px; height:150px; margin-right:10px; margin-bottom:10px;">
-                                                        <p style="width: 300px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo est doloribus, ab voluptatum rerum labore,</p>
-                                                        <label class="custom-checkbox">
-                                                            <input name="question3" type="checkbox">
-                                                            <span class="checkmark"></span>
-                                                          </label>
-                                                          
-                                                    </div>
-                                            </dd>
-
-											
-											
-                                    	</dl>    
+                                                
+                                            </dl>  
+                                        <?php } ?>  
                                     </div>
                                 </div>
                                 <div class="button-box text-align-center has-animation fadeout-element">             
                                     <div class="clapat-button-wrap parallax-wrap hide-ball">
                                         <div class="clapat-button parallax-element">
                                             <div  class="button-border outline rounded parallax-element-second">
-                                                <input type = "submit" class="" value="Charger" style="text-align:center;" />
+                                                <input type = "submit" class="" value="Orientez moi" style="text-align:center;" />
  
                                                 </div>
                                         </div>
@@ -376,7 +287,7 @@ DÉCOUVRE TON ALTER EGO SUPER-HÉROÏQUE !</span></h2>
                 
                 
                 <!-- Footer -->
-                <?php include("/../content/Foot.php"); ?>
+                <?php include("/../content/foot.php"); ?>
                 <!--/Footer -->
             
         
@@ -407,7 +318,7 @@ DÉCOUVRE TON ALTER EGO SUPER-HÉROÏQUE !</span></h2>
     
     
 		
-    <?php include("/../content/Footer.php"); ?>
+    <?php include("/../content/footer.php"); ?>
 
 
 </body>

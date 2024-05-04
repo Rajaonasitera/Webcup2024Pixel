@@ -24,7 +24,7 @@
                                             <li><a class="ajax-link" href="index-showcase-gallery.html" data-type="page-transition">Archive Gallery</a></li> 
                                         </ul> -->
                                     </li>
-                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="<?=site_url("/")?>"><div class="before-span"><span data-hover="Home">Home</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="<?=site_url("/fo/welcome")?>"><div class="before-span"><span data-hover="Home">Home</span></div></a></li>
                                     <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="<?=site_url("/fo/connexion")?>"><div class="before-span"><span data-hover="Dashboard">Dashboard</span></div></a></li>
                                     <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="<?=site_url("/fo/connexion")?>"><div class="before-span"><span data-hover="Qui suis je?">Qui suis je?</span></div></a></li>
                                     <!-- <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="contact.html"><div class="before-span"><span data-hover="Contact">Fonctionnalite</span></div></a></li> -->

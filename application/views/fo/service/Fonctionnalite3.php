@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include("/../content/Header.php"); ?>
+<?php include("/../content/header.php"); ?>
 
 
 
 <body class="hidden hidden-ball smooth-scroll rounded-borders" data-primary-color="#8c6144">
-
-	
 	<main>		
         <!-- Preloader -->
-        <?php include("/../Loading.php"); ?>
+        <?php include("/../loading.php"); ?>
 
         <!--/Preloader -->     
         
@@ -19,7 +17,7 @@
         <div id="clapat-page-content" class="light-content" data-bgcolor="#0c0c0c">
             
             <!-- Header -->
-            <?php include("/../content/Menu.php"); ?>
+            <?php include("/../content/menu.php"); ?>
 
             <!-- Content Scroll -->
             <div id="content-scroll">
@@ -172,7 +170,7 @@
                 
                 
                 <!-- Footer -->
-                <?php include("/../content/Foot.php"); ?>
+                <?php include("/../content/foot.php"); ?>
                 <!--/Footer -->
             
         
@@ -203,7 +201,7 @@
     <div id="rotate-device"></div>
     
     
-	<?php include("/../content/Footer.php"); ?>
+	<?php include("/../content/footer.php"); ?>
 
 
 

@@ -109,7 +109,7 @@
     </style>
     <main>
       <!-- Preloader -->
-      <?php include("Loading.php"); ?>
+      <?php include("loading.php"); ?>
 
       <!--/Preloader -->
 
@@ -121,7 +121,7 @@
           data-bgcolor="#0c0c0c"
         >
           <!-- Header -->
-          <?php include("content/Menu.php"); ?>
+          <?php include("content/menu.php"); ?>
 <hr>
 <hr>
           <!-- Content Scroll -->
@@ -237,7 +237,7 @@
             <!--/Main -->
 
             <!-- Footer -->
-            <?php include("content/Foot.php"); ?>
+            <?php include("content/foot.php"); ?>
             <!--/Footer -->
           </div>
           <!--/Content Scroll -->
@@ -261,6 +261,6 @@
     </div>
     <div id="rotate-device"></div>
 
-    <?php include("content/Footer.php"); ?>
+    <?php include("content/footer.php"); ?>
   </body>
 </html>

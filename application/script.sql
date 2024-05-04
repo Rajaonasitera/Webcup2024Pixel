@@ -12,15 +12,17 @@ create table pays(
 
 create table client(
     id_client int auto_increment primary key,
-    nom_client varchar(100),
-    prenom_client varchar(100),
+    nom_client varchar(100)
     genre int,
     dtn date,
     id_pays varchar(50),
     email varchar(100),
     mdp varchar(50),
+    pseudo varchar(100),
     is_admin int,
-    foreign key(id_pays) references pays(id_pays)
+    id_categorie varchar(10),
+    foreign key(id_pays) references pays(id_pays),
+    foreign key(id_categorie) references categorie(id_categorie)
 )ENGINE = InnoDB;
 
 -- --------------------------------------------------------
@@ -45,6 +47,7 @@ create table pack(
 create table detail_pack(
     id_pack varchar(10),
     id_service varchar(10),
+    etat_service int,
     foreign key(id_pack) references pack(id_pack),
     foreign key(id_service) references my_service(id_service)
 )ENGINE = InnoDB;
@@ -68,28 +71,57 @@ create table vente(
 
 -- MODE DE PAIEMENT
 
-create table mode_paiement(
-    id_mode varchar(10) primary key,
-    nom_mode varchar(50),
-    image_path varchar(100)
-)ENGINE = InnoDB;
+-- create table mode_paiement(
+--     id_mode varchar(10) primary key,
+--     nom_mode varchar(50),
+--     image_path varchar(100)
+-- )ENGINE = InnoDB;
 
 -- --------------------------------------------------------------
 -- PAIEMENT DES UTILISATEURS (A REVOIR IHANY)
 
-create table paiement(
-    id_paiement int auto_increment primary key,
-    id_vente int,
-    id_mode varchar(10),
-    numero_compte varchar(100),
-    foreign key(id_vente) references vente(id_vente),
-    foreign key(id_mode) references mode_paiement(id_mode)
-)ENGINE = InnoDB;
-
--- ----------------------------------------------------------------
-
--- AJOUT STTAUS DETAILS PACK
-
-alter table detail_pack add column etat_service int;
+-- create table paiement(
+--     id_paiement int auto_increment primary key,
+--     id_vente int,
+--     id_mode varchar(10),
+--     numero_compte varchar(100),
+--     foreign key(id_vente) references vente(id_vente),
+--     foreign key(id_mode) references mode_paiement(id_mode)
+-- )ENGINE = InnoDB;
 
 -- -----------------------------------------------------------------
+
+-- --------------------- PIXEL -------------------------------------
+
+-- ---------- CATEGORIES DE POUVOIR 
+create table categorie(
+    id_categorie varchar(10) primary key,
+    nom_categorie varchar(50),
+    image_cat varchar(100),
+    image_prof varchar(100),        -- Image du prof
+    nom_prof varchar(100)           -- Nom de prof
+)ENGINE = InnoDB;
+
+
+-- ------------ QUESTIONS POUR LES ORIENTATIONS
+
+create table question_cat(
+    id_question varchar(10) primary key,
+    nom_question text
+)ENGINE = InnoDB;
+
+-- ------------- REPONSE POUR QUESTIONS
+create table reponse_cat(
+    id_reponse varchar(10) primary key,
+    id_question varchar(10),
+    nom_reponse text,
+    id_categorie varchar(10),
+    image_path varchar(50),
+    foreign key(id_categorie) references categorie(id_categorie),
+    foreign key(id_question) references question_cat(id_question)
+)ENGINE = InnoDB;
+
+-- ----------- ALTER TABLE CLIENT
+alter table client add column histoire text;
+
+-- -------------------------------------------------------------------------

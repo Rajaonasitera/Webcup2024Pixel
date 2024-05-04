@@ -7,7 +7,25 @@ class Connexion extends CI_Controller {
     public function __construct(){
         parent::__construct();
         $this->load->model('fo/Login');
+		$this->load->model('fo/Inscription');
     }
+
+	// INSCRIPTION LOGIN
+	public function abonnement(){
+		$nom_client = $this -> input -> post('nom_client');
+		$genre = $this -> input -> post('genre');
+		$dtn = $this -> input -> post('dtn');
+		$id_pays = $this -> input -> post('id_pays');
+		$email = $this -> input -> post('email');
+		$mdp = $this -> input -> post('mdp');
+		$pseudo = $this -> input -> post('pseudo');
+		$id_categorie = $this -> input -> post('id_categorie');
+
+		$id = $this -> Inscription -> subscription($nom_client, $genre, $dtn, $id_pays, $email, $mdp, $pseudo, $id_categorie);
+		// ATAO ANATY SESSION VE?? OUI ALOA
+
+		// REDIRECTION MAKANY AMIN LISTE DES FORMATIONS
+	}
 
 	
 	// VERIFICATION LOGIN
@@ -57,7 +75,4 @@ class Connexion extends CI_Controller {
 		$this->load->view('fo/login');
 		
 	}		
-	public function incription(){
-		$this->load->view('welcome');
-	}
 }

@@ -7,7 +7,7 @@
 	
 	<main>		
         <!-- Preloader -->
-        <?php include("Loading.php"); ?>
+        <?php include("loading.php"); ?>
         <!--/Preloader -->     
         
         <div class="cd-index cd-main-content">
@@ -16,7 +16,7 @@
         <div id="clapat-page-content" class="light-content" data-bgcolor="#0c0c0c">
             
             <!-- Header -->
-            <?php include("Menu.php"); ?>
+            <?php include("menu.php"); ?>
             <!--/Header -->
             
             
@@ -199,7 +199,7 @@
                 <!--/Main -->
                 
                 <!-- Footer -->
-                <?php include("Foot.php"); ?>
+                <?php include("foot.php"); ?>
                 <!--/Footer -->
             
         
@@ -233,7 +233,7 @@
     <div id="rotate-device"></div>
     
     
-    <?php include("Footer.php"); ?>
+    <?php include("footer.php"); ?>
 
 
 

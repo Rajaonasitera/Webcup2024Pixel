@@ -8,7 +8,7 @@
 	
 	<main>		
         <!-- Preloader -->
-        <?php include("/../Loading.php"); ?>
+        <?php include("/../loading.php"); ?>
 
         <!--/Preloader -->     
         
@@ -18,7 +18,7 @@
         <div id="clapat-page-content" class="light-content" data-bgcolor="#0c0c0c">
             
             <!-- Header -->
-            <?php include("/../content/Menu.php"); ?>
+            <?php include("/../content/menu.php"); ?>
             
             <!--/Header -->        
             
@@ -182,7 +182,7 @@
                 
                 
                 <!-- Footer -->
-                <?php include("/../content/Foot.php"); ?>
+                <?php include("/../content/foot.php"); ?>
                 <!--/Footer -->
             
         
@@ -214,7 +214,7 @@
     
     
 		
-    <?php include("/../content/Footer.php"); ?>
+    <?php include("/../content/footer.php"); ?>
 
 
 </body>
