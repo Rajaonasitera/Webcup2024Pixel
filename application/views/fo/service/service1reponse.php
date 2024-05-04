@@ -48,16 +48,18 @@
                                     <div class="pinned-element right">
                                         <h1 class="primary-font-title has-mask-fill">The Solution</h1>
                                    		<p><span class="has-opacity">DEVELOPING ONLINE PRESENCES WHERE THE SOPHISTICATION OF VISUAL DESIGN MEETS THE CALCULATED SCIENCE OF PRODUCT SELLING.</span></p>
-                                           <div class="button-box text-align-center has-animation fadeout-element">             
-                                        <div class="clapat-button-wrap parallax-wrap hide-ball">
-                                            <div class="clapat-button parallax-element">
-                                                <div class="button-border outline rounded parallax-element-second">
-                                                    <a class="ajax-link" href="index-showcase-grid.html" data-type="page-transition">
-                                                        <span data-hover="S'inscrire à Knowhere">S'inscrire à Knowhere</span>
-                                                    </a>
+                                           <div class="button-box text-align-center has-animation fadeout-element">  
+                                        <form action="<?=base_url("fo/inscription")?>" method="post">           
+                                    <div class="clapat-button-wrap parallax-wrap hide-ball">
+                                        <div class="clapat-button parallax-element">
+                                            <div  class="button-border outline rounded parallax-element-second">
+                                                <input type = "submit" class="" value="Charger" style="text-align:center;" />
+ 
                                                 </div>
-                                            </div>
-                                        </div> 
+                                        </div>
+                                    </div> 
+                                    </form>
+                                </div>
                                     </div>
                                     </div>
                                 </div>                                

@@ -23,4 +23,7 @@ class Connexion extends CI_Controller {
 		$this->load->view('fo/login');
 		
 	}		
+	public function incription(){
+		$this->load->view('welcome');
+	}
 }
