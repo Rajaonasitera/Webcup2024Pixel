@@ -7,7 +7,7 @@
                                     <i class="fa-solid fa-angle-up"></i>
                                 </div>
                             </div>
-                            <div class="button-text sticky left"><span data-hover="Back Top">Back Top</span></div> 
+                            <div class="button-text sticky left"><span data-hover="Retour en haut">Retour en haut</span></div> 
                         </div>
                         
                         <div class="footer-middle">
@@ -16,13 +16,13 @@
                         
                         <div class="socials-wrap">            	
                             <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
-                            <div class="socials-text">Follow Us</div>
+                            <div class="socials-text">Contactez nous</div>
                             <ul class="socials">
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.dribbble.com/clapat" target="_blank">Db</a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.twitter.com/clapatdesign" target="_blank">Tw</a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.behance.com/clapat" target="_blank">Be</a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.facebook.com/clapat.ro" target="_blank">Fb</a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="https://www.instagram.com/clapat.themes/">In</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="#" target="_blank">Db</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="#" target="_blank">Tw</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="#" target="_blank">Be</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="#" target="_blank">Fb</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" href="#">In</a></span></li>
                             </ul>                
                         </div>
                         

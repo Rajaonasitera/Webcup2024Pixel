@@ -10,15 +10,16 @@
 		ga('send', 'pageview');
 	</script>
     
-    <title>Pixel design</title>
+    <title>Knowhere</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <meta name="description" content="Download the best Creative Portfolio HTML Template in 2024" />
     <meta name="author" content="ClaPat Studio"> -->
     <meta charset="UTF-8" />    
-    <link rel="icon" type="image/ico" href="<?=base_url("assets/images/P.jpg")?>" />
+    <link rel="icon" type="image/ico" href="<?=base_url("assets/images/logo/icon.png")?>" />
     <link href="<?=base_url("assets/css/style.css")?>" rel="stylesheet" />
     <link href="<?=base_url("assets/css/all.min.css")?>" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet"> 
-   
+       <!-- Animated css -->
+       
 </head>

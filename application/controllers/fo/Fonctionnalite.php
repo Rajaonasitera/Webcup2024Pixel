@@ -20,7 +20,7 @@ class Fonctionnalite extends CI_Controller {
 	 */
 	public function f1()
 	{
-		$this->load->view('fo/service/fonctionnalite1');
+		$this->load->view('fo/service/service1');
 		
 	}		
     public function f2()
@@ -33,4 +33,7 @@ class Fonctionnalite extends CI_Controller {
 		$this->load->view('fo/service/fonctionnalite3');
 		
 	}	
+	public function reponse(){
+		$this->load->view('fo/service/service1reponse');
+	}
 }

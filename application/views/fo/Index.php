@@ -29,13 +29,15 @@
                 <div id="main">
 
                     <!-- Hero Section -->
-                    <div id="hero">
+                    <div id="hero"  class="has-image autoscroll1">
                         <div id="hero-styles">
                             <div id="hero-caption" class="content-full-width parallax-scroll-caption text-align-center height-title">
                                 <div class="inner">                                    
-                                    <h1 class="hero-title caption-timeline primary-font-title"><span>Montoya</span></h1>
+                                    <h1 class="hero-title caption-timeline primary-font-title"><span>knowhere</span></h1>
                                     <div class="hero-subtitle caption-timeline">
-                                    	<span>WE ARE A CREATIVE STUDIO, SPECIALIZED IN STRATEGY, BRANDING <br class="destroy"> DESIGN, AND DEVELOPMENT. OUR WORK IS ALWAYS AT THE INTERSECTION <br class="destroy"> OF DESIGN AND TECHNOLOGY.</span>
+                                    	<span>
+DEVENEZ UN HÉROS !
+Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy">MAÎTRISEZ VOS POUVOIRS, DÉVELOPPEZ VOS COMPÉTENCES ET SAUVEZ LE MONDE !<br class="destroy">REJOIGNEZ-NOUS ET RÉVÉLEZ VOTRE POTENTIEL !</span>
                                     </div>                                   
                                 </div>
                             </div>
@@ -47,15 +49,30 @@
                                                 <i class="fa-solid fa-angle-down"></i>
                                             </div>
                                         </div>
-                                        <div class="button-text sticky right"><span data-hover="Scroll to Explore">Scroll to Explore</span></div> 
+                                        <div class="button-text sticky right"><span data-hover="Faites défiler pour explorer">FAITES DÉFILER POUR EXPLORER</span></div> 
                                     </div>
                                 </div>
                                 <div class="hero-footer-right">
-                    				<div id="info-text">Featured Projects</div>
+                    				<div id="info-text">FORMATION DE SUPERHÉROS</div>
                                 </div>
                             </div>                                  
                         </div>
-                    </div>                      
+                    </div>           
+                    <div id="hero-image-wrapper">
+                    	<div id="hero-background-layer" class="parallax-scroll-image">
+                            <div id="hero-bg-image" style="background-image:url(images/04hero.jpg)">
+                            	<div class="hero-video-wrapper">
+                                    <video loop muted playsinline class="bgvid">
+                                        <source src="<?=base_url("assets/images/landing_knowhere.mp4")?>" type="video/mp4">
+                                    </video>
+                                    <audio autoplay>
+                    <source src="<?=base_url("assets/images/landing_knowhere.mp3")?>" type="audio/mpeg">
+                    <!-- Inclure des sources audio supplémentaires ici pour une meilleure compatibilité -->
+                </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                              
                     <!--/Hero Section -->
                     
                     
@@ -71,8 +88,8 @@
                                 <div class="move-thumbs-wrapper">
                                 
                                     <div class="start-thumbs-caption">
-                                        <h2 class="primary-font-title big-title has-mask-fill">Recognitions</h2>
-                                        <p>OUR PRESTIGIOUS DESIGN AWARDS</p>
+                                        <h2 class="primary-font-title big-title has-mask-fill">SPÉCIALISATIONS SURHUMAINES</h2>
+                                        <p> NOTRE PROGRAMME COMPLET VOUS PRÉPARE À DEVENIR LE DÉFENSEUR ULTIME DE LA JUSTICE ET DU BIEN-ÊTRE DE L'HUMANITÉ.</p>
                                     </div>
                                 
                                     
@@ -82,7 +99,7 @@
                                         <div class="start-move-thumb" data-start="top 120%" data-stop="600%">
                                             <div class="move-thumb-inner">                                                    
                                                 <div class="section-image">
-                                                    <img src="<?=base_url("assets/images/aw01.jpg")?>" class="item-image" alt="">
+                                                    <img src="<?=base_url("assets/images/categorie/categorie1.png")?>" class="item-image" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -90,7 +107,7 @@
                                         <div class="start-move-thumb" data-start="top 90%" data-stop="1100%">
                                             <div class="move-thumb-inner">                                                    
                                                 <div class="section-image">
-                                                    <img src="<?=base_url("assets/images/aw02.jpg")?>" class="item-image" alt="">
+                                                    <img src="<?=base_url("assets/images/categorie/categorie2.png")?>" class="item-image" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -98,7 +115,7 @@
                                         <div class="start-move-thumb" data-start="top 90%" data-stop="400%">
                                             <div class="move-thumb-inner">                                                    
                                                 <div class="section-image">
-                                                    <img src="<?=base_url("assets/images/aw03.jpg")?>" class="item-image" alt="">
+                                                    <img src="<?=base_url("assets/images/categorie/categorie3.png")?>" class="item-image" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -106,7 +123,7 @@
                                         <div class="start-move-thumb" data-start="top 120%" data-stop="600%">
                                             <div class="move-thumb-inner">                                                    
                                                 <div class="section-image">
-                                                    <img src="<?=base_url("assets/images/aw04.jpg")?>" class="item-image" alt="">
+                                                    <img src="<?=base_url("assets/images/categorie/categorie4.png")?>" class="item-image" alt="">
                                                 </div>
                                             </div>
                                         </div>                                        
@@ -114,7 +131,7 @@
                                         <div class="start-move-thumb" data-start="top 100%" data-stop="750%">
                                             <div class="move-thumb-inner">                                                    
                                                 <div class="section-image">
-                                                    <img src="<?=base_url("assets/images/aw05.jpg")?>" class="item-image" alt="">
+                                                    <img src="<?=base_url("assets/images/categorie/categorie5.png")?>" class="item-image" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -122,7 +139,7 @@
                                         <div class="start-move-thumb" data-start="top 40%" data-stop="300%">
                                             <div class="move-thumb-inner">                                                    
                                                 <div class="section-image">
-                                                    <img src="<?=base_url("assets/images/aw06.jpg")?>" class="item-image" alt="">
+                                                    <img src="<?=base_url("assets/images/categorie/categorie6.png")?>" class="item-image" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -147,29 +164,28 @@
 
                             <!-- Row -->
                             <div class="content-row full text-align-center row_padding_left row_padding_right dark-section" data-bgcolor="#0c0c0c">
-                                <hr>
-                                    <div class="start-thumbs-caption">
-                                        <h2 class="primary-font-title big-title has-mask-fill">Recognitions</h2>
-                                        <p>OUR PRESTIGIOUS DESIGN AWARDS</p>
-                                        
-                                        <p>
-                                            <span class="has-opacity">CRAFTING WEBSITES WHERE THE ELEGANCE</span>
-                                            <br class="destroy">
-                                            <span class="has-opacity">OF DESIGN INTERSECTS WITH THE SCIENCE OF SELLING PRODUCTS.</span>
-                                        </p>
-                                                                        
-                                        <div class="button-box text-align-center has-animation fadeout-element">             
-                                            <div class="clapat-button-wrap parallax-wrap hide-ball">
-                                                <div class="clapat-button parallax-element">
-                                                    <div class="button-border outline rounded parallax-element-second">
-                                                        <a class="" href="<?php echo base_url("fo/connexion/login/0") ?>">
-                                                            <span data-hover="Connexion">Connexion</span>
-                                                            </a>
-                                                        </div>
+                            <hr>
+                            <div class="start-thumbs-caption">
+                                    <h2 class="primary-font-title big-title has-mask-fill">EXPLOREZ LA FORMATION SUPERHÉROÏQUE</h2>
+                                
+                                <p>
+                                    <span class="has-opacity"> NOUS SOMMES FIERS DE VOUS PRÉSENTER UNE GAMME COMPLÈTE DE SERVICES CONÇUS POUR VOUS</span>
+                                    <br class="destroy">
+                                    <span class="has-opacity">PRÉPARER À DEVENIR LE PROCHAIN DÉFENSEUR DE LA JUSTICE ET DU BIEN-ÊTRE DE L'HUMANITÉ.</span>
+                                </p>
+                                                                
+                                <div class="button-box text-align-center has-animation fadeout-element">             
+                                    <div class="clapat-button-wrap parallax-wrap hide-ball">
+                                        <div class="clapat-button parallax-element">
+                                            <div class="button-border outline rounded parallax-element-second">
+                                                <a class="" href="<?php echo base_url("fo/service/connexion") ?>">
+                                                    <span data-hover="Connexion">Connexion</span>
+                                                    </a>
                                                 </div>
-                                            </div> 
                                         </div>
-                                    </div>
+                                    </div> 
+                                </div>
+                                </div>
                                 <hr>
                                 
                                 <div id="itemsWrapperLinks">                               
@@ -182,14 +198,14 @@
                                                     <div class="img-mask">
                                                         <a class="slide-link" data-type="page-transition" href="<?=site_url("fo/fonctionnalite/f1")?>"></a>
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="<?=base_url("assets/images/01hero.jpg")?>" class="item-image grid__item-img" alt="">
+                                                            <img src="<?=base_url("assets/images/qui.jpg")?>" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="<?=base_url("assets/images/01hero.jpg")?>" class="grid__item-img grid__item-img--large" alt="">                              
+                                                        <img src="<?=base_url("assets/images/qui.jpg")?>" class="grid__item-img grid__item-img--large" alt="">                              
                                                     </div>
                                                     <div class="slide-caption trigger-item-link-secondary">
-                                                        <div class="slide-title primary-font-title"><span>Fonctionnalite 1</span></div>
-                                                        <div class="slide-date"><span>2024</span></div>
-                                                        <div class="slide-cat"><span>Photography</span></div>                                           
+                                                        <div class="slide-title primary-font-title"><span>Qui suis je?</span></div>
+                                                        <div class="slide-date"><span>01</span></div>
+                                                        <div class="slide-cat"><span>Service</span></div>                                           
                                                     </div>
                                                 </div>
                                             </div>
@@ -199,9 +215,9 @@
                                                     <div class="img-mask">
                                                         <a class="slide-link" data-type="page-transition" href="<?=site_url("fo/fonctionnalite/f2")?>"></a>
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="<?=base_url("assets/images/02hero.jpg")?>" class="item-image grid__item-img" alt="">
+                                                            <img src="<?=base_url("assets/images/formation.jpg")?>" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="<?=base_url("assets/images/02hero.jpg")?>" class="grid__item-img grid__item-img--large" alt="">                              
+                                                        <img src="<?=base_url("assets/images/formation.jpg")?>" class="grid__item-img grid__item-img--large" alt="">                              
                                                     </div>
                                                     <div class="slide-caption trigger-item-link-secondary">
                                                         <div class="slide-title primary-font-title"><span>Fonctionnalite 2</span></div>                                                    
@@ -216,9 +232,9 @@
                                                     <div class="img-mask">
                                                         <a class="slide-link" data-type="page-transition" href="<?=site_url("fo/fonctionnalite/f3")?>"></a>
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="<?=base_url("assets/images/03hero.jpg")?>" class="item-image grid__item-img" alt="">
+                                                            <img src="<?=base_url("assets/images/progress.jpg")?>" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="<?=base_url("assets/images/03hero.jpg")?>" class="grid__item-img grid__item-img--large" alt="">                              
+                                                        <img src="<?=base_url("assets/images/progress.jpg")?>" class="grid__item-img grid__item-img--large" alt="">                              
                                                     </div>
                                                     <div class="slide-caption trigger-item-link-secondary">
                                                         <div class="slide-title primary-font-title"><span>Fonctionnalite 3</span></div>                                                    
@@ -262,18 +278,50 @@
                                 
                             </div> 
                             <!--/Row -->
+                            <hr><hr>
+                            <hr><hr>
+
+                             <!-- Row -->
+                             <div class="content-row full row_padding_bottom dark-section text-align-center" data-bgcolor="#0c0c0c">
+                                
+                             <h2 class="primary-font-title big-title has-mask-fill">COMMUNAUTE DES HEROS</h2>
+                                <p>DÉCOUVREZ CE QUE NOTRE COMMUNAUTÉ DE HÉROS EN HERBE A À DIRE SUR LEUR EXPÉRIENCE AVEC NOTRE PROGRAMME DE FORMATION. 
+                
+                                    <br>REJOIGNEZ-NOUS ET FAITES PARTIE DE CETTE COMMUNAUTÉ ENGAGÉE QUI ŒUVRE ENSEMBLE POUR RENDRE LE MONDE MEILLEUR.</p>
+                                
+                                <hr>
+                                
+                                <div class="clapat-slider-wrapper content-slider small-looped-carousel has-animation disabled-slider-dots autocenter dark-cursor">
+        							<div class="clapat-slider">
+                                        <div class="clapat-slider-viewport">
+                                            <div class="clapat-slide"><div class="slide-img"><img src="<?=base_url("assets/images/commentaire/commentaires-01.png")?>"></div></div>
+                                            <div class="clapat-slide"><div class="slide-img"><img src="<?=base_url("assets/images/commentaire/commentaires-02.png")?>" ></div></div>
+                                            <div class="clapat-slide"><div class="slide-img"><img src="<?=base_url("assets/images/commentaire/commentaires-03.png")?>" ></div></div>
+                                            <div class="clapat-slide"><div class="slide-img"><img src="<?=base_url("assets/images/commentaire/commentaires-04.png")?>" ></div></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="clapat-controls">
+                                        <div class="clapat-button-next slider-button-next"></div>
+                                        <div class="clapat-button-prev slider-button-prev"></div>
+                                        <div class="clapat-pagination"></div>
+                                    </div>
+                                </div>
+                                
+                            </div> 
+                            <!--/Row -->
+                            
                                 
                             <!-- Row -->
-                            <div class="content-row full row_padding_top row_padding_left row_padding_right text-align-center dark-section" data-bgcolor="#0c0c0c">
+                            <div class="content-row full  row_padding_left row_padding_right text-align-center dark-section" data-bgcolor="#0c0c0c">
                             
                                 <h2 class="big-title primary-font-title"><span class="has-mask-fill">Partenaires et sponsors</span></h2>
-                                <p>WE DEVELOP GORGEOUS AND MEMORABLE <br class="destroy"> PROJECTS FOR OUR CLIENTS.</p>
+                                <p>WE DEVELOP GORGEOUS AND MEMORABLE <br class="destroy">des alliés engagés dans notre mission de former les super-héros de demain.</p>
                                 <hr><hr>
                             </div> 
                             <!--/Row -->
 
                            
-                            <!--/Row -->
                                <!-- Row -->
                             <div class="content-row text-align-center dark-section " data-bgcolor="#0c0c0c">
                                 
@@ -320,22 +368,21 @@
                             
                             </div> 
                             <!--/Row -->
-                            
-
+                            <hr><hr>
+                            <hr><hr>
                             <!-- Row -->
                             <div class="content-row full  row_padding_left row_padding_right text-align-center dark-section" data-bgcolor="#0c0c0c">
                                 
                                 <h2 class="big-title primary-font-title"><span class="has-mask-fill">Equipe</span></h2>
-                                <p>WE DEVELOP GORGEOUS AND MEMORABLE <br class="destroy"> PROJECTS FOR OUR CLIENTS.</p>
-                                <hr><hr>
-
+                                <p>DÉCOUVREZ L'ÉQUIPE DÉVOUÉE DERRIÈRE LA CRÉATION DE NOTRE SITE.</p>
+                               
                             </div> 
                             <!--/Row -->
 
-                            
+                            <hr><hr>
                             
                             <!-- Row -->
-                            <div class="content-row full row_padding_top row_padding_bottom dark-section" data-bgcolor="#0c0c0c">
+                            <div class="content-row full row_padding_bottom dark-section" data-bgcolor="#0c0c0c">
                                 
                                 <ul class="team-members-list" data-fx="1">
                                     <li class="link has-hover-image" data-img="<?=base_url("assets/images/team1.jpg")?>">
@@ -428,22 +475,10 @@
                         </div>
                         <!--/Main Page Content -->
                         
+                        <hr><hr> 
                         
-                        <!-- Page Navigation --> 
-                        <div id="page-nav">
-                            <div class="page-nav-wrap">
-                                <div class="page-nav-caption content-full-width text-align-center height-title">                                 
-                                    <div class="inner">
-                                    	<div class="next-hero-subtitle caption-timeline"><span>EXPLORING OUR WORLD OF VISUAL AND INTERACTIVE DESIGN</span></div>
-                                        <a class="page-title next-ajax-link-page" data-type="page-transition" data-centerline="Entrer" href="about.html">
-                                            <div class="next-hero-title primary-font-title caption-timeline"><span>Dashboard</span></div>
-                                        </a>                                        
-                                    </div>               
-                                </div>
-                            </div>
-                        </div>      
-                        <!--/Page Navigation -->
-                        
+                        <hr><hr>
+                       
                                 
                     </div>
                     <!--/Main Content --> 
