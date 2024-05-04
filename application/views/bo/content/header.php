@@ -94,7 +94,8 @@
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userSettings">
                     <div class="header-profile-actions">
                       <a href="profile.html">Profile</a>
-                      <a href="login.html">Logout</a>
+
+                      <a href="<?php echo site_url("fo/connexion/logout") ?>">Logout</a>
                     </div>
                   </div>
                 </li>

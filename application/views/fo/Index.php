@@ -147,29 +147,29 @@
 
                             <!-- Row -->
                             <div class="content-row full text-align-center row_padding_left row_padding_right dark-section" data-bgcolor="#0c0c0c">
-                            <hr>
-                            <div class="start-thumbs-caption">
-                                    <h2 class="primary-font-title big-title has-mask-fill">Recognitions</h2>
-                                    <p>OUR PRESTIGIOUS DESIGN AWARDS</p>
-                                
-                                <p>
-                                    <span class="has-opacity">CRAFTING WEBSITES WHERE THE ELEGANCE</span>
-                                    <br class="destroy">
-                                    <span class="has-opacity">OF DESIGN INTERSECTS WITH THE SCIENCE OF SELLING PRODUCTS.</span>
-                                </p>
-                                                                
-                                <div class="button-box text-align-center has-animation fadeout-element">             
-                                    <div class="clapat-button-wrap parallax-wrap hide-ball">
-                                        <div class="clapat-button parallax-element">
-                                            <div class="button-border outline rounded parallax-element-second">
-                                                <a class="" href="<?php echo base_url("fo/service/connexion") ?>">
-                                                    <span data-hover="Connexion">Connexion</span>
-                                                    </a>
+                                <hr>
+                                    <div class="start-thumbs-caption">
+                                        <h2 class="primary-font-title big-title has-mask-fill">Recognitions</h2>
+                                        <p>OUR PRESTIGIOUS DESIGN AWARDS</p>
+                                        
+                                        <p>
+                                            <span class="has-opacity">CRAFTING WEBSITES WHERE THE ELEGANCE</span>
+                                            <br class="destroy">
+                                            <span class="has-opacity">OF DESIGN INTERSECTS WITH THE SCIENCE OF SELLING PRODUCTS.</span>
+                                        </p>
+                                                                        
+                                        <div class="button-box text-align-center has-animation fadeout-element">             
+                                            <div class="clapat-button-wrap parallax-wrap hide-ball">
+                                                <div class="clapat-button parallax-element">
+                                                    <div class="button-border outline rounded parallax-element-second">
+                                                        <a class="" href="<?php echo base_url("fo/connexion/login/0") ?>">
+                                                            <span data-hover="Connexion">Connexion</span>
+                                                            </a>
+                                                        </div>
                                                 </div>
+                                            </div> 
                                         </div>
-                                    </div> 
-                                </div>
-                                </div>
+                                    </div>
                                 <hr>
                                 
                                 <div id="itemsWrapperLinks">                               

@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Connexion</title>
-  <link rel="stylesheet" href="<?=site_url("assets/css/style1.css")?>">
-  <link rel="icon" type="image/ico" href="<?=site_url("/assets/images/P.jpg")?>" />
-    <link href="<?=site_url("/assets/css/style.css")?>" rel="stylesheet" />
-    <link href="<?=site_url("/assets/css/all.min.css")?>" rel="stylesheet" />
+  <link rel="stylesheet" href="<?=base_url("assets/css/style1.css")?>">
+  <link rel="icon" type="image/ico" href="<?=base_url("/assets/images/P.jpg")?>" />
+    <link href="<?=base_url("assets/css/style.css")?>" rel="stylesheet" />
+    <link href="<?=base_url("assets/css/all.min.css")?>" rel="stylesheet" />
 
 </head>
 <body>
@@ -30,24 +30,40 @@
       </div>
     </div>
     
-    <!-- <div class="user_options-forms" id="user_options-forms">
+    <div class="user_options-forms" id="user_options-forms">
       <div class="user_forms-login">
         <h2 class="forms_title">Login</h2>
-        <form class="forms_form">
+        <form 
+          class="forms_form"
+          method="post"
+          action="<?php echo site_url("fo/connexion/verifyLogin") ?>"  
+        >
           <fieldset >
             <div class="forms_field">
-              <input type="email" placeholder="Email" class="forms_field-input" required autofocus />
+              <input 
+                type="email" 
+                placeholder="Email" 
+                class="forms_field-input" 
+                name="email"
+                required autofocus 
+              />
             </div>
             <div class="forms_field">
-              <input type="password" placeholder="Password" class="forms_field-input" required />
+              <input 
+                type="password" 
+                placeholder="Password" 
+                class="forms_field-input" 
+                name="mdp"
+                required 
+              />
             </div>
           </fieldset>
           <div class="forms_buttons">
             <input type="submit" value="Log In" class="forms_buttons-action">
           </div>
         </form>
-      </div> -->
-      <div class="user_forms-signup">
+      </div>
+      <!-- <div class="user_forms-signup">
         <h2 class="forms_title">Sign Up</h2>
         <form class="forms_form">
           <fieldset class="forms_fieldset">
@@ -65,7 +81,7 @@
             <input type="submit" value="Sign up" class="forms_buttons-action">
           </div>
         </form>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
