@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+require('/../BaseSessionController.php');
 
-class MenuController extends CI_Controller {
+class MenuController extends BaseSessionController {
 	public function __construct()
     {
         parent::__construct();

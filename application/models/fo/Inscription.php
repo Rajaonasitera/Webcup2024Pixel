@@ -39,8 +39,10 @@ class Inscription extends CI_Model {
             $data['id_categorie'] = $id_categorie;
             $data['is_admin'] = 1;
             $data['histoire'] = "";
-
+           
+            
             $this->db->insert('client', $data);
+           
             return $this->db->insert_id();
         } catch (Exception $e) {
             // If an exception occurs during insertion, return an error message

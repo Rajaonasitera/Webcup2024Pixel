@@ -11,7 +11,7 @@
 </head>
 <body>
   <!-- Preloader -->
-  <?php include("loading.php"); ?>
+  <?php  $this->load->view('fo/loading'); ?>
         <!--/Preloader -->   
 <!-- partial:index.partial.html -->
 <section class="user">
@@ -86,7 +86,7 @@
   </div>
 </section>
 <!-- partial -->
-<?php include("content/footer.php"); ?>
+<?php  $this->load->view('fo/content/footer'); ?>
 
 </body>
 </html>

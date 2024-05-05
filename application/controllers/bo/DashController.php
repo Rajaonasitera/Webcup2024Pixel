@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+require('/../BaseSessionController.php');
 
-class DashController extends CI_Controller {
+class DashController extends BaseSessionController {
 
     public function __construct() {
         parent::__construct();

@@ -209,7 +209,7 @@ body {
 		width: 80px;
 		height: 60px;
 		> div {
-			background-color: #1395ba;
+			background-color: #0c0c0c;
 			height: 100%;
 			width: 9px;
 			@include roundedCorners(10);
@@ -219,31 +219,31 @@ body {
 			animation: linedelay 1.1s infinite ease-in-out;
 		}
 		.line2 {
-			background-color: #5ca793;
+			background-color: #0c0c0c;
 			-moz-animation-delay: -1s;
 			-webkit-animation-delay: -1s;
 			animation-delay: -1s;
 		}
 		.line3 {
-			background-color: #a2b86c;
+			background-color: #0c0c0c;
 			-moz-animation-delay: -0.9s;
 			-webkit-animation-delay: -0.9s;
 			animation-delay: -0.9s;
 		}
 		.line4 {
-			background-color: #ebc844;
+			background-color: #0c0c0c;
 			-moz-animation-delay: -0.8s;
 			-webkit-animation-delay: -0.8s;
 			animation-delay: -0.8s;
 		}
 		.line5 {
-			background-color: #ecaa38;
+			background-color: #0c0c0c;
 			-moz-animation-delay: -0.7s;
 			-webkit-animation-delay: -0.7s;
 			animation-delay: -0.7s;
 		}
 		.line6 {
-			background-color: #ef8b2c;
+			background-color: #0c0c0c;
 			-moz-animation-delay: -0.6s;
 			-webkit-animation-delay: -0.6s;
 			animation-delay: -0.6s;

@@ -129,3 +129,91 @@ create table reponse_cat(
 alter table client add column histoire text;
 
 -- -------------------------------------------------------------------------
+
+-- -------------------------- PART 3 -------------------------
+-- HABILITE
+
+create table hability(
+    id_hability varchar(50) primary key,
+    nom_hability varchar(50)
+)ENGINE = InnoDB;
+
+-- ---------------------------------------------------------------
+-- HABILITE CLIENT
+
+create table hability_client(
+    id_hability_client int auto_increment primary key,
+    id_hability varchar(50),
+    id_client int,
+    valeur int,
+    dateHability date,
+    foreign key(id_client) references client(id_client),
+    foreign key(id_hability) references hability(id_hability)
+)ENGINE = InnoDB;
+
+-- -------------------------------------------------------------
+-- VALEUR CATEGORIE
+
+create table note_category(
+    id_cat_note int auto_increment primary key,
+    id_client int,
+    noteCat int,
+    dateNote date,
+    foreign key(id_client) references client(id_client)
+)ENGINE = InnoDB;
+
+-- -------------------------------------------------------------
+-- PROGRAMME D'EXERCICE
+
+create table programme(
+    id_programme varchar(50) primary key,
+    nom_programme varchar(100),
+    duree varchar(50)
+)ENGINE = InnoDB;
+
+-- --------------------------------------------------------------
+-- EXERCICE
+
+create table exercice(
+    id_exercice varchar(50) primary key,
+    nom_exercice varchar(100),
+    id_programme varchar(50),
+    foreign key(id_programme) references programme(id_programme)
+)ENGINE = InnoDB;
+
+-- ---------------------------------------------------------
+-- RESULTAT D'UN PROGRAMME -> HABILITY
+
+create table result_hability(
+    id_result_hability varchar(10) primary key,
+    id_programme varchar(50),
+    id_hability varchar(50),
+    valeurPlus int,
+    foreign key(id_programme) references programme(id_programme),
+    foreign key(id_hability) references hability(id_hability)
+)ENGINE = InnoDB;
+
+-- -------------------------------------------------------------
+-- RESULTAT D'UN PROGRAMME -> CATEGORIE
+
+create table result_categorie(
+    id_result_hability varchar(10) primary key,
+    id_programme varchar(50),
+    id_categorie varchar(10),
+    valeurPlus int,
+    foreign key(id_programme) references programme(id_programme),
+    foreign key(id_categorie) references categorie(id_categorie)
+)ENGINE = InnoDB;
+
+-- ------------------------------------------------------------
+
+-- LISTE DE PROGRAMME DU CLIENT
+create table programme_client(
+    id_p_client int auto_increment primary key,
+    id_programme varchar(50),
+    dateDebut date,
+    statusProgramme int,
+    foreign key(id_programme) references programme(id_programme)
+);
+
+-- ----------------------------------------------------------------

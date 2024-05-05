@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include("content/Header.php"); ?>
+<?php  $this->load->view('fo/content/header'); ?>
 
 
 <body class="hidden hidden-ball smooth-scroll1 rounded-borders" data-primary-color="#8c6144">
@@ -18,7 +18,7 @@
         <div id="clapat-page-content" class="light-content" data-bgcolor="#0c0c0c">
             
             <!-- Header -->
-           <?php include("content/Menu.php"); ?>
+            <?php  $this->load->view('fo/content/menu'); ?>
             
                 
             <!-- Content Scroll -->
@@ -477,7 +477,7 @@ Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy
                 <!--/Main -->
                 
                 <!-- Footer -->
-                <?php include("content/Foot.php"); ?>
+                <?php  $this->load->view('fo/content/footer'); ?>
                 <!--/Footer -->
             
         
@@ -511,8 +511,7 @@ Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy
     <div id="rotate-device"></div>
     
     
-    <?php include("content/Footer.php"); ?>
-   
+    <?php  $this->load->view('fo/content/footer'); ?>
 
 </body>
 

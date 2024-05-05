@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include("Header.php"); ?>
+<?php  $this->load->view('fo/content/header'); ?>
 
 <body class="hidden hidden-ball smooth-scroll rounded-borders" data-primary-color="#8c6144">
 
@@ -16,7 +16,7 @@
         <div id="clapat-page-content" class="light-content" data-bgcolor="#0c0c0c">
             
             <!-- Header -->
-            <?php include("menu.php"); ?>
+            <?php  $this->load->view('fo/content/menu'); ?>
             <!--/Header -->
             
             
@@ -199,7 +199,7 @@
                 <!--/Main -->
                 
                 <!-- Footer -->
-                <?php include("foot.php"); ?>
+                <?php  $this->load->view('fo/content/foot'); ?>
                 <!--/Footer -->
             
         
@@ -233,7 +233,7 @@
     <div id="rotate-device"></div>
     
     
-    <?php include("footer.php"); ?>
+    <?php  $this->load->view('fo/content/footer'); ?>
 
 
 

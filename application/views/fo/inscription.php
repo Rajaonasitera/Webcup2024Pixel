@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <?php include("content/Header.php"); ?>
+<?php  $this->load->view('fo/content/header'); ?>
 
   <body
     class="hidden hidden-ball smooth-scroll1 rounded-borders"
@@ -121,7 +121,7 @@
           data-bgcolor="#0c0c0c"
         >
           <!-- Header -->
-          <?php include("content/menu.php"); ?>
+          <?php  $this->load->view('fo/content/menu'); ?>
 <hr>
 <hr>
           <!-- Content Scroll -->
@@ -250,7 +250,7 @@
             <!--/Main -->
 
             <!-- Footer -->
-            <?php include("content/foot.php"); ?>
+            <?php  $this->load->view('fo/content/foot'); ?>
             <!--/Footer -->
           </div>
           <!--/Content Scroll -->
@@ -274,6 +274,6 @@
     </div>
     <div id="rotate-device"></div>
 
-    <?php include("content/footer.php"); ?>
+    <?php  $this->load->view('fo/content/footer'); ?>
   </body>
 </html>

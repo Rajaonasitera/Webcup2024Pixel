@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-    <?php include("/../content/header.php"); ?>
+    <?php  $this->load->view('fo/content/header'); ?>
 
    
 </head>    
@@ -13,7 +13,7 @@
 	
 	<main>		
         <!-- Preloader -->
-        <?php include("/../loading.php"); ?>
+        <?php  $this->load->view('fo/loading'); ?>
 
         <!--/Preloader -->     
         
@@ -23,15 +23,13 @@
         <div id="clapat-page-content" class="light-content" data-bgcolor="#0c0c0c">
             
             <!-- Header -->
-           <?php include("/../content/menu.php"); ?>
+            <?php  $this->load->view('fo/content/menu'); ?>
             
             <!--/Header -->        
             
             
             <!-- Content Scroll -->
             <div id="content-scroll">
-            
-            
                 <!-- Main -->
                 <div id="main">
                 
@@ -106,7 +104,7 @@
         </div>
     <div id="rotate-device"></div>
 
-    <?php include("/../content/footer.php"); ?>
+    <?php  $this->load->view('fo/content/footer'); ?>
 
 
 </body>

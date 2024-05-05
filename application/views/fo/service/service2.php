@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-    <?php include("/../content/Header.php"); ?>
-
+    <?php  $this->load->view('fo/content/header'); ?>
+    <link href="<?=base_url("assets/myjs/bootstrap.min.css")?>" rel="stylesheet" />
    
 </head>    
 
@@ -13,7 +13,7 @@
 	
 	<main>		
         <!-- Preloader -->
-        <?php include("/../Loading.php"); ?>
+        <?php  $this->load->view('fo/loading'); ?>
 
         <!--/Preloader -->     
         
@@ -23,7 +23,7 @@
         <div id="clapat-page-content" class="light-content" data-bgcolor="#0c0c0c">
             
             <!-- Header -->
-           <?php include("/../content/Menu.php"); ?>
+            <?php  $this->load->view('fo/content/menu'); ?>
             
             <!--/Header -->        
             <!-- Content Scroll -->
@@ -42,7 +42,7 @@
                             <div id="hero-description" class="content-full-width">
                                 <div class="inner">
                                 	<p class="bigger has-opacity">Découvrez la formation complète offerte par Knowhere.</p>
-                                        <p> À la fin de votre parcours, recevez un certificat attestant de vos compétences acquises.</p> 
+                                        <p> À la fin de votre parcours, recevez un certificat atpresenceant de vos compétences acquises.</p> 
                                     <br>
                                                                                                        
                                     <hr> 
@@ -105,16 +105,35 @@
                                                 OPTEZ POUR NOTRE FORMATION EN PRÉSENTIEL ACCOMPAGNÉE D'UN HERO COACH DÉDIÉ POUR UN APPRENTISSAGE PERSONNALISÉ ET INSPIRANT.
                                             </span>
                                         </p>
+                                        <?php 
+                                            $dataPresentiel = $this -> Pack -> getDetailPack($services[1]['id_pack']);
+                                        ?>
+                                        <ul>
+                                            <?php foreach($dataPresentiel as $service){ ?>
+                                                <li>
+                                                    <<?php echo $service['balise'] ?>>
+                                                        <?php echo $service['nom_service'] ?>
+                                                    </<?php echo $service['balise'] ?>>
+                                                </li>
+                                            <?php } ?>
+                                            <li> <?php echo $services[1]['descri'] ?></li>
+                                        </ul>
+                                        <h1 class="primary-font-title has-mask-fill">
+                                            Prix: <?php echo $services[1]['pu'] ?> Vibranium
+                                        </h1>
                                         <div class="button-border outline rounded parallax-element-second">
-                                            <a class="" href="<?php echo base_url("fo/service/connexion") ?>">
-                                                <span data-hover="Connexion">Connexion</span>
+                                            <a data-bs-toggle="modal" data-bs-target="#presence">
+                                                <span data-hover="Connexion">S'abonner</span>
                                             </a>
                                         </div>
+                                        
                                     </div>
+                                   
                                     
                                     <div class="scrolling-element right">
                                         <figure class="has-animation">
-                                            <a href="images/projects/green02.jpg" class="image-link"><img src="<?=base_url("assets/images/option/knowhere.jpg")?>" alt="Image Title"></a>
+                                            <a href="<?=base_url("assets/images/option/knowhere.jpg")?>" class="image-link">
+                                                <img src="<?=base_url("assets/images/option/knowhere.jpg")?>" alt="Image Title"></a>
                                         </figure>
                                     </div>
                                 </div>
@@ -122,7 +141,7 @@
                             </div> 
                             <!--/Row -->
 
-                             <!-- Row -->
+                             <!-- FORMATION A DISTANCE -->
                              <div class="content-row row_padding_top row_padding_bottom dark-section change-header-color" data-bgcolor="#0c0c0c">
                                 
                                 <div class="pinned-section">
@@ -135,21 +154,34 @@
                                     <div class="pinned-element right">
                                         <h1 class="primary-font-title has-mask-fill">DISTANCIEL</h1>
                                    		<p><span class="has-opacity">POUR LES HABITANTS D'AUTRES PLANÈTES, NOTRE OPTION DE FORMATION À DISTANCE LEUR PERMET D'ACCÉDER À NOTRE PROGRAMME OÙ QU'ILS SE TROUVENT DANS L'UNIVERS.</span></p>
+                                           <?php 
+                                            $dataPresentiel = $this -> Pack -> getDetailPack($services[0]['id_pack']);
+                                        ?>
+                                        <ul>
+                                            <?php foreach($dataPresentiel as $service){ ?>
+                                                <li>
+                                                    <<?php echo $service['balise'] ?>>
+                                                        <?php echo $service['nom_service'] ?>
+                                                    </<?php echo $service['balise'] ?>>
+                                                </li>
+                                            <?php } ?>
+                                            <li> <?php echo $services[0]['descri'] ?></li>
+                                        </ul>
+                                        <h1 class="primary-font-title has-mask-fill">
+                                            Prix: <?php echo $services[1]['pu'] ?> Vibranium
+                                        </h1>
+                                        <div class="button-border outline rounded parallax-element-second">
+                                            <a data-bs-toggle="modal" data-bs-target="#distance">
+                                                <span data-hover="Connexion">S'abonner</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>                                
                                 
                             </div> 
                             <!--/Row -->
 
-                           
-                           
-                           
-
-                            
-                            
-                            
-                                                                          
-                                
+              
                     </div>
                     <!--/Main Content --> 
                 </div>
@@ -269,7 +301,7 @@
                 </style>
                 
                 <!-- Footer -->
-                <?php include("/../content/Foot.php"); ?>
+                <?php  $this->load->view('fo/content/foot'); ?>
                 <!--/Footer -->
             
         
@@ -297,12 +329,124 @@
             <div class="hero-translate"></div>
         </div>
     <div id="rotate-device"></div>
-    
-    
-		
-    <?php include("/../content/Footer.php"); ?>
+    <?php  $this->load->view('fo/content/footer'); ?>
+
+    <script src="<?=base_url("assets/myjs/bootstrap.bundle.min.js")?>"></script>
 
 
+    <!-- MODAL PAIEMENT PRESENTIEL -->
+    <div class="modal fade" id="presence" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title" id="staticBackdropLabel">
+                        Veuillez remplir la fiche de paiement ci-dessus :
+                    </p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button> 
+                </div>
+                <form 
+                    action="<?=base_url("fo/formationCtrl/paiement")?>" 
+                    method="post"
+                >
+                    <input type="hidden" name="id_pack" value="<?php echo $services[1]['id_pack'] ?>">
+                    <div class="modal-body text-center">
+
+                        <div style="margin-bottom: 45px">
+                            Retrait de <b class="text-center"> <?php echo $services[1]['pu'] ?> Vibranium</b>
+                        </div>
+                    
+                        <!-- NOM DU PAYEUR -->
+                        <input 
+                            class="form-control form-control-lg" 
+                            type="text" 
+                            placeholder="Votre nom" 
+                            aria-label=".form-control-lg example"
+                            style="margin-bottom: 15px"
+                        >
+                        <!-- ADRESSE -->
+                        <input 
+                            class="form-control form-control-lg" 
+                            type="email" 
+                            placeholder="name@gmail.com" 
+                            aria-label=".form-control-lg example"
+                            style="margin-bottom: 15px"
+                        >
+                        <!-- NUMERO -->
+                        <input 
+                            class="form-control form-control-lg" 
+                            type="text" 
+                            placeholder="Numero carte Vibranium" 
+                            aria-label=".form-control-lg example"
+                            style="margin-bottom: 15px"
+                        >
+                    </div>
+
+                    <div class="modal-footer justify-content-center">
+                        <button type = "submit" class="btn btn-primary" style="color: black">
+                            Payer 
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+      <!-- MODAL PAIEMENT DISTANCE -->
+      <div class="modal fade" id="distance" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title" id="staticBackdropLabel">
+                        Veuillez remplir la fiche de paiement ci-dessus :
+                    </p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button> 
+                </div>
+                <form 
+                    action="<?=base_url("fo/formationCtrl/paiement")?>" 
+                    method="post"
+                >
+                    <input type="hidden" name="id_pack" value="<?php echo $services[0]['id_pack'] ?>">
+                    <div class="modal-body text-center">
+
+                        <div style="margin-bottom: 45px">
+                            Retrait de <b class="text-center"> <?php echo $services[0]['pu'] ?> Vibranium</b>
+                        </div>
+                    
+                        <!-- NOM DU PAYEUR -->
+                        <input 
+                            class="form-control form-control-lg" 
+                            type="text" 
+                            placeholder="Votre nom" 
+                            aria-label=".form-control-lg example"
+                            style="margin-bottom: 15px"
+                        >
+                        <!-- ADRESSE -->
+                        <input 
+                            class="form-control form-control-lg" 
+                            type="email" 
+                            placeholder="name@gmail.com" 
+                            aria-label=".form-control-lg example"
+                            style="margin-bottom: 15px"
+                        >
+                        <!-- NUMERO -->
+                        <input 
+                            class="form-control form-control-lg" 
+                            type="text" 
+                            placeholder="Numero carte Vibranium" 
+                            aria-label=".form-control-lg example"
+                            style="margin-bottom: 15px"
+                        >
+                    </div>
+
+                    <div class="modal-footer justify-content-center">
+                        <button type = "submit" class="btn btn-primary" style="color: black">
+                            Payer 
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

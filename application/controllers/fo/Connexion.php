@@ -8,6 +8,7 @@ class Connexion extends CI_Controller {
         parent::__construct();
         $this->load->model('fo/Login');
 		$this->load->model('fo/Inscription');
+		$this->load->model('fo/programme/Hability');
     }
 
 	// INSCRIPTION LOGIN
@@ -19,11 +20,18 @@ class Connexion extends CI_Controller {
 		$email = $this -> input -> post('email');
 		$mdp = $this -> input -> post('mdp');
 		$id_categorie = $this -> input -> post('id_categorie');
+		$this->db->trans_start(); // Start a transaction
 
 		$id = $this -> Inscription -> subscription($nom_client, $genre, $dtn, $id_pays, $email, $mdp, $id_categorie);
+		$this-> Hability -> setHabilitiesFirst($id);
+		$this-> Hability -> insertNoteCategorie($id, 5);
 
+		$this->db->trans_complete(); // Complete the transaction
 		
-		// ATAO ANATY SESSION VE?? OUI ALOA
+		
+		session_start();
+		$_SESSION['user_id'] = $id;
+		$_SESSION['id_categorie'] = $id_categorie;
 
 		// REDIRECTION MAKANY AMIN LISTE DES FORMATIONS
 		redirect(base_url().'index.php/fo/fonctionnalite/f2/');

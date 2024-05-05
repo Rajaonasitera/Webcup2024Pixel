@@ -4,15 +4,17 @@ create or replace view v_user_complet as (
     select
         client.id_client,
         client.nom_client,
-        client.prenom_client,
         client.genre,
         client.dtn,
         client.email,
         client.id_pays,
         pays.nom_pays,
-        pays.code_pays
+        pays.code_pays,
+        categorie.nom_categorie,
+        categorie.image_cat
     from client
     join pays on pays.id_pays = client.id_pays
+    join categorie on categorie.id_categorie = client.id_categorie
 );
 -- -------------------------------------------------------
 
@@ -127,7 +129,6 @@ create or replace view v_vente_history as (
     select
         id_client,
         nom_client,
-        prenom_client,
         nom_pack,
         dateSubscription,
         pu_pack,
@@ -163,7 +164,32 @@ create or replace view v_detail_pack as (
     from detail_pack
     join pack on detail_pack.id_pack = pack.id_pack
     join my_service on my_service.id_service = detail_pack.id_service
+    order by id_service asc
+);
+
+-- ---------------------------------------------------------------
+-- MES HAILITIES AVEC LEUR NOTES
+
+
+create or replace view v_some_hability as (
+    select
+        id_client,
+        id_hability,
+        sum(valeur) as note
+    from hability_client
+    group by id_hability, id_client
 );
 
 
+-- ------------------------------------------------------------
+-- MA NOTE DE CATEGORIES
 
+create or replace view v_some_categories as (
+    select
+        id_client,
+        sum(noteCat) as note
+    from note_category
+    group by id_client
+);
+
+-- ---------------------------------------------------------

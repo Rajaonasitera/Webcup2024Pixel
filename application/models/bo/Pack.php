@@ -18,6 +18,16 @@ class Pack extends CI_Model {
         return $query->result_array();
     }
 
+    // PRENDRE LE DETAIL D'UN PACK PAR ID
+    public function getDetailPackById($id_pack){
+        $this->db->select('*');
+        $this->db->from('pack');
+        $this->db->where('id_pack', $id_pack);
+        $query = $this->db->get();
+
+        return $query->row_array();
+    }
+
     // PRENDRE TOUS LES PACKS
     public function getAllPacks(){
         $this->db->select('*');

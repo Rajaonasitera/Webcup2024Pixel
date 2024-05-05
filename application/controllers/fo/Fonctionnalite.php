@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+require('/../BaseSessionController.php');
 
-class Fonctionnalite extends CI_Controller {
+class Fonctionnalite extends BaseSessionController {
 
 	public function __construct(){
         parent::__construct();
@@ -23,6 +24,7 @@ class Fonctionnalite extends CI_Controller {
 	}	
     public function f3()
 	{
-		$this->load->view('fo/service/fonctionnalite3');
+		
+		$this->load->view('fo/service/programme');
 	}	
 }
