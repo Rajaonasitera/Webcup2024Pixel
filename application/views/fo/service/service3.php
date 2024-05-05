@@ -93,21 +93,21 @@
                         <div id="main-page-content">
                             
                         <!-- Row -->
-<div class="content-row row_padding_top dark-section change-header-color text-align-center" data-bgcolor="#0c0c0c">
-                            
-                            
-                            
-    <h1 class="primary-font-title has-mask-fill">PROGRAMMES</h1>
-        <p>
-            <span class="has-opacity">DÉCOUVREZ NOS OPTIONS FLEXIBLES D'APPRENTISSAGE, QUE CE SOIT EN DISTANCIEL OU EN PRÉSENTIEL. </span>
-            <br class="destroy">
-            <span class="has-opacity">CHOISISSEZ LE FORMAT QUI VOUS CONVIENT LE MIEUX POUR ATTEINDRE VOS OBJECTIFS DE FORMATION.</span>
-        </p>
-        
-    <hr><hr>
-    
-</div> 
-<!--/Row -->
+                            <div class="content-row row_padding_top dark-section change-header-color text-align-center" data-bgcolor="#0c0c0c">
+                                                        
+                                                        
+                                                        
+                                <h1 class="primary-font-title has-mask-fill">PROGRAMMES</h1>
+                                    <p>
+                                        <span class="has-opacity">DÉCOUVREZ NOS OPTIONS FLEXIBLES D'APPRENTISSAGE, QUE CE SOIT EN DISTANCIEL OU EN PRÉSENTIEL. </span>
+                                        <br class="destroy">
+                                        <span class="has-opacity">CHOISISSEZ LE FORMAT QUI VOUS CONVIENT LE MIEUX POUR ATTEINDRE VOS OBJECTIFS DE FORMATION.</span>
+                                    </p>
+                                    
+                                <hr><hr>
+                                
+                            </div> 
+                            <!--/Row -->
 
                         <!-- Row -->
                         <div class="content-row row_padding_bottom dark-section " data-bgcolor="#0c0c0c">
@@ -119,17 +119,22 @@
 
                                             <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 
-<!-- Use it like any other HTML element -->
-<model-viewer style="width: 800px; height: 800px;" alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="<?=base_url("assets/status/darna.glb")?>"  shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                                                <!-- Use it like any other HTML element -->
+                                                <model-viewer 
+                                                    style="width: 800px; height: 800px;"  
+                                                    src="<?=base_url("assets/status/darna.glb")?>"  
+                                                    shadow-intensity="1" 
+                                                    camera-controls touch-action="pan-y">
+                                                </model-viewer>
 
                                         </a>
                                     </figure>
                                 </div>
                                 
                                 <div class="pinned-element right">
-                                    <h1 class="primary-font-title has-mask-fill">XP du Niveau</h1>
+                                    <h1 class="primary-font-title has-mask-fill">NIVEAU EN <?php echo $client['nom_categorie'] ?> : <?php echo $level['note'] ?> </h1>
 
-                                    <progress id="file" max="100" value="70" >70%</progress>
+                                    <progress id="file" max="200" value="<?php echo $level['note'] ?>" ></progress>
                                     <h5>Groot</h5>
                                 <p>Planète : Terre</p>
                                 <p>Pseudo : </p>
@@ -222,34 +227,7 @@
                                     <hr> 
                                 </div>
                         </div>
-
-                            <!-- <div class="button-box has-animation fadeout-element">             
-                                    <div class="clapat-button-wrap parallax-wrap hide-ball">
-                                        <div class="clapat-button parallax-element">
-                                            <div id="bubu" class="button-border outline rounded parallax-element-second">
-                                                <a id="startRecording" class="">
-                                                    <span data-hover="Enregistrer mes  histoires"><span><i class="fas fa-microphone"></i> Enregistrer mes histoires</span></span>
-                                                    </a>
-                                                </div>
-                                        </div>
-                                    </div> 
-                                </div>
-                                <div class="button-box has-animation fadeout-element">             
-                                    <div class="clapat-button-wrap parallax-wrap hide-ball">
-                                        <div class="clapat-button parallax-element">
-                                            <div class="button-border outline rounded parallax-element-second">
-                                                <a id="stopRecording" class="">
-                                                    <span data-hover="Interpreter mon but via IA"> Interpreter mon but via IA</span>
-                                                    </a>
-                                                </div>
-                                        </div>
-                                    </div> 
-                                </div>
-                                <audio id="audioPlayer" controls></audio>
-                                
-                                </div>
-                            </div>                                 -->
-                            
+                           
                         </div> 
                         <!--/Row -->
 
@@ -261,7 +239,9 @@
 								
 								<div class="pinned-section">
                                     <div class="pinned-element left">
-                                        <h2 class="big-title primary-font-title no-margins"><span class="has-mask-fill">Votre batmanien</span><br><span class="has-mask-fill">programme</span></h2>
+                                        <h2 class="big-title primary-font-title no-margins"><span class="has-mask-fill">Votre 
+                                            <?php echo $client['nom_categorie'] ?>
+                                        </span><br><span class="has-mask-fill">programme</span></h2>
                                     </div>
                                     
                                     <div class="scrolling-element right">
@@ -271,40 +251,27 @@
                                                 <h5>Programmes</h5>
                                                 <p>Batmanien - Mentale</p>
                                                 <p>Batmanien - Physique </p>
-                                                <div class="button-box has-animation fadeout-element " style="margin-top: 25px;margin-bottom: 25px;">             
-                                                    <div class="clapat-button-wrap parallax-wrap hide-ball">
-                                                        <div class="clapat-button parallax-element">
-                                                            <div class="button-border outline rounded parallax-element-second">
-                                                                <a class="" href="<?php echo base_url("fo/service/connexion") ?>">
-                                                                    <span data-hover="Exporter Certificat PDF">Exporter Certificat PDF</span>
-                                                                    </a>
-                                                                </div>
-                                                        </div>
-                                                    </div> 
-                                                </div>
+                                                
                                             </div>
 
 
                                                             <!-- Row -->
                                             <div>
-                                                <div style="height:120px;width:300px;">
-                                                    <h4>Tes abilités</h4>
-                                                    <p>Natation</p>
-                                                    <progress id="file" max="100" value="50" >50%</progress>
-                                                </div>
-                                                <!--/Row -->
-                                                <!-- Row -->
-                                                <div style="height:120px;width:300px; margin-top: 25px;">
-                                                    <p>Rapidité</p>
-                                                    <progress id="file" max="100" value="20" >20%</progress>
-                                                </div>
+                                                <h4>Tes abilités</h4>
+
+                                                <?php foreach($habilities as $h){ ?>
+                                                      <div style="height:120px;width:300px;">
+                                                      <p><?php echo $h['nom_hability'] ?> : <?php echo $h['note'] ?></p>
+                                                      <progress id="file" max="200" value="<?php echo $h['note'] ?>" ></progress>
+                                                  </div>
+                                                <?php } ?>
                                             </div>
                                             <!--/Row -->
                                             <div class="button-box has-animation fadeout-element">             
                                                     <div class="clapat-button-wrap parallax-wrap hide-ball">
                                                         <div class="clapat-button parallax-element">
                                                             <div class="button-border outline rounded parallax-element-second">
-                                                                <a class="" href="<?php echo base_url("fo/service/connexion") ?>">
+                                                                <a class="" href="<?php echo base_url("fo/evolutionCtrl/listeProgramme") ?>">
                                                                     <span data-hover="Ajouter un programme">Ajouter un programme</span>
                                                                     </a>
                                                             </div>

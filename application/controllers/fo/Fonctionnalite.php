@@ -25,6 +25,6 @@ class Fonctionnalite extends BaseSessionController {
     public function f3()
 	{
 		
-		$this->load->view('fo/service/programme');
+		$this->load->view('fo/service/service3');
 	}	
 }

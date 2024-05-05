@@ -180,6 +180,16 @@ create or replace view v_some_hability as (
     group by id_hability, id_client
 );
 
+-- -----------------------------------------------------------
+
+create or replace view v_some_hability_complet as (
+    select
+        v_some_hability.*,
+        hability.nom_hability
+    from v_some_hability
+    join hability on hability.id_hability = v_some_hability.id_hability
+);
+
 
 -- ------------------------------------------------------------
 -- MA NOTE DE CATEGORIES

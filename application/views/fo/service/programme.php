@@ -140,12 +140,12 @@
 
                                                     <div style="width: 100%; display: flex; margin: auto;">
                                                         <div class="button-box text-align-center has-animation fadeout-element">
-                                                            <form action="<?=base_url("fo/evolutionCtrl/")?>" method="post">
-                                                            <input type="hidden" name="id_programme" value=" <?php echo $programmes[0]['id_programme'] ?>">
+                                                            <form action="<?=base_url("fo/evolutionCtrl/newProgramme")?>" method="post">
+                                                            <input type="hidden" name="id_programme" value="<?php echo $programmes[0]['id_programme'] ?>">
                                                                 <div class="clapat-button-wrap parallax-wrap hide-ball">
                                                                     <div class="clapat-button parallax-element">
                                                                         <div class="button-border outline rounded parallax-element-second">
-                                                                        <input type="submit" class="" value="Commencer" style="text-align:center;" />
+                                                                        <input type="submit" class="" value="Finir ce cours" style="text-align:center;" />
                                                                     </div>
                                                                 </div>
                                                             </form>
@@ -210,7 +210,7 @@
                                                                 <div class="clapat-button-wrap parallax-wrap hide-ball">
                                                                     <div class="clapat-button parallax-element">
                                                                         <div class="button-border outline rounded parallax-element-second">
-                                                                        <input type="submit" class="" value="Commencer" style="text-align:center;" />
+                                                                        <input type="submit" class="" value="Finir ce cours" style="text-align:center;" />
                                                                     </div>
                                                                 </div>
                                                             </form>
@@ -275,7 +275,7 @@
                                                                 <div class="clapat-button-wrap parallax-wrap hide-ball">
                                                                     <div class="clapat-button parallax-element">
                                                                         <div class="button-border outline rounded parallax-element-second">
-                                                                        <input type="submit" class="" value="Commencer" style="text-align:center;" />
+                                                                        <input type="submit" class="" value="Finir ce cours" style="text-align:center;" />
                                                                     </div>
                                                                 </div>
                                                             </form>

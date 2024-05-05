@@ -51,7 +51,7 @@ class Evolution extends CI_Model {
         $data['id_client'] = $id_client;
         $data['id_programme'] = $id_programme;
         $data['dateDebut'] = date('Y-m-d');
-        $data['statusProgramme'] = 0;
+        $data['statusProgramme'] = 1;
 
         $this->db->insert('programme_client', $data);
     }
@@ -70,7 +70,7 @@ class Evolution extends CI_Model {
     // PRENDRE MES HABILITEIS
     public function getMyHabilities($id_client){
         $this->db->select('*');
-        $this->db->from('v_some_hability');
+        $this->db->from('v_some_hability_complet');
         $this->db->where('id_client', $id_client);
         $query = $this->db->get();
 
