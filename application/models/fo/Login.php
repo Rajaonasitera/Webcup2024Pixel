@@ -24,7 +24,8 @@ class Login extends CI_Model {
             'data' => array(
                 'nom_client' => $result['nom_client'],
                 'is_admin' => $result['is_admin'],
-                'id_client' => $result['id_client']
+                'id_client' => $result['id_client'],
+                'id_categorie' => $result['id_categorie']
             )
         );
     }else{

@@ -203,3 +203,15 @@ create or replace view v_some_categories as (
 );
 
 -- ---------------------------------------------------------
+-- LISTES DES PROGRAMMES
+
+create or replace view v_programme_client as (
+    
+    select
+        programme_client.*,
+        programme.nom_programme,
+        programme.duree
+
+    from programme_client
+    join programme on programme.id_programme = programme_client.id_programme
+);

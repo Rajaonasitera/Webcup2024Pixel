@@ -52,6 +52,16 @@ class Hability extends CI_Model {
         $this->db->insert('note_category', $data);
     }
 
+    
+    // INSERTION D'UNE NOTE DE CATEGORIES
+    public function insertNoteCategorie($id_client, $noteCat){
+        $data['id_client'] = $id_client;
+        $data['noteCat'] = $noteCat;
+        $data['dateNote'] = date('Y-m-d');
+
+        $this->db->insert('note_category', $data);
+    }
+
     // INSERTION D'UNE HABILITE
     public function insertHabilityClient($id_hability, $id_client, $valeur){
         $data['id_client'] = $id_client;

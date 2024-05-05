@@ -94,9 +94,7 @@
                             
                         <!-- Row -->
                             <div class="content-row row_padding_top dark-section change-header-color text-align-center" data-bgcolor="#0c0c0c">
-                                                        
-                                                        
-                                                        
+                         
                                 <h1 class="primary-font-title has-mask-fill">PROGRAMMES</h1>
                                     <p>
                                         <span class="has-opacity">DÉCOUVREZ NOS OPTIONS FLEXIBLES D'APPRENTISSAGE, QUE CE SOIT EN DISTANCIEL OU EN PRÉSENTIEL. </span>
@@ -135,10 +133,10 @@
                                     <h1 class="primary-font-title has-mask-fill">NIVEAU EN <?php echo $client['nom_categorie'] ?> : <?php echo $level['note'] ?> </h1>
 
                                     <progress id="file" max="200" value="<?php echo $level['note'] ?>" ></progress>
-                                    <h5>Groot</h5>
-                                <p>Planète : Terre</p>
+                                <h5> <?php echo $client['nom_client'] ?></h5>
+                                <p>Planète : <?php echo $client['nom_pays'] ?></p>
                                 <p>Pseudo : </p>
-                                <p>Catégorie : Batmanien</p>
+                                <p>Catégorie : <?php echo $client['nom_categorie'] ?></p>
                                 <form action="">
                                     <textarea placeholder="Entrez votre histoire" name="pseudo" id="pseudo"></textarea>
                                     <div class="button-box has-animation fadeout-element">             

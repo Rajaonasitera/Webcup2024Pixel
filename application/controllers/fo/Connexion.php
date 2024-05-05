@@ -56,7 +56,9 @@ class Connexion extends CI_Controller {
 		if($result['etat'] == 1){
 
 			$data = $result['data'];
-
+			session_start();
+			$_SESSION['user_id'] = $data['id_client'];
+			$_SESSION['id_categorie'] = $data['id_categorie'];
 			// EN CAS HOE ADMIN LE OLONA
 			if($data['is_admin'] == 0){
 				redirect(base_url().'index.php/bo/dashController/getDashBoard/');
@@ -65,7 +67,7 @@ class Connexion extends CI_Controller {
 			}
 
 		} else {
-			redirect('connexion/login/1');
+			redirect('fo/connexion/login/1');
 		}
 	}
 
@@ -75,7 +77,7 @@ class Connexion extends CI_Controller {
 			$this->load->view('fo/login');
 		} else {
 			$data['etat'] = "Login ou mot de passe incorrect";
-			$this->load->view('login', $data);
+			$this->load->view('fo/login', $data);
 		}	
 	}
 

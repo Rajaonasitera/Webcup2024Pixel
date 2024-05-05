@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php  $this->load->view('fo/content/header'); ?>
+<?php include("content/header.php"); 
+session_start();
+$id = "null";
+if(isset($_SESSION['user_id'])){
+    $id = $_SESSION['user_id'];
+}
+?>
 
 
 <body class="hidden hidden-ball smooth-scroll1 rounded-borders" data-primary-color="#8c6144">
@@ -8,7 +14,7 @@
 	
 	<main>		
         <!-- Preloader -->
-        <?php include("Loading.php"); ?>
+        <?php include("loading.php"); ?>
        
         <!--/Preloader -->     
         
@@ -18,7 +24,7 @@
         <div id="clapat-page-content" class="light-content" data-bgcolor="#0c0c0c">
             
             <!-- Header -->
-            <?php  $this->load->view('fo/content/menu'); ?>
+           <?php include("content/menu.php"); ?>
             
                 
             <!-- Content Scroll -->
@@ -36,7 +42,8 @@
                                     <h1 class="hero-title caption-timeline primary-font-title"><span>knowhere</span></h1>
                                     <div class="hero-subtitle caption-timeline">
                                     	<span>
-DEVENEZ UN HÉROS !
+
+DEVENEZ UN HÉROS !  <?php echo $id ?>
 Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy">MAÎTRISEZ VOS POUVOIRS, DÉVELOPPEZ VOS COMPÉTENCES ET SAUVEZ LE MONDE !<br class="destroy">REJOIGNEZ-NOUS ET RÉVÉLEZ VOTRE POTENTIEL !</span>
                                     </div>                                   
                                 </div>
@@ -70,7 +77,10 @@ Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy
                     <div id="main-content">
                         <!-- Main Page Content -->
                         <div id="main-page-content" class="content-full-width">                            
-                            
+                            <hr>
+                            <hr>
+                        <script src="https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@3/assets/js/ecoindex-badge.js" defer></script>  
+<div id="ecoindex-badge" ></div>
                             <!-- SERVICE ROW -->
                             <div class="content-row text-align-center dark-section" data-bgcolor="#0c0c0c">
                                 
@@ -168,7 +178,7 @@ Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy
                                     <div class="clapat-button-wrap parallax-wrap hide-ball">
                                         <div class="clapat-button parallax-element">
                                             <div class="button-border outline rounded parallax-element-second">
-                                                <a class="" href="<?php echo base_url("fo/service/connexion") ?>">
+                                                <a class="" href="<?php echo base_url("fo/connexion") ?>">
                                                     <span data-hover="Connexion">Connexion</span>
                                                     </a>
                                                 </div>
@@ -222,14 +232,14 @@ Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy
                                                     <div class="img-mask">
                                                         <a class="slide-link" data-type="page-transition" href="<?=site_url("fo/fonctionnalite/f3")?>"></a>
                                                         <div class="section-image trigger-item-link">
-                                                            <img src="<?=base_url("assets/images/progress_final.jpg")?>" class="item-image grid__item-img" alt="">
+                                                            <img src="<?=base_url("assets/images/progress.jpg")?>" class="item-image grid__item-img" alt="">
                                                         </div>                                                
-                                                        <img src="<?=base_url("assets/images/progress_final.jpg")?>" class="grid__item-img grid__item-img--large" alt="">                              
+                                                        <img src="<?=base_url("assets/images/progress.jpg")?>" class="grid__item-img grid__item-img--large" alt="">                              
                                                     </div>
                                                     <div class="slide-caption trigger-item-link-secondary">
-                                                        <div class="slide-title primary-font-title"><span>Fonctionnalite 3</span></div>                                                    
-                                                        <div class="slide-date"><span>2024</span></div>
-                                                        <div class="slide-cat"><span>Branding</span></div>                                           
+                                                        <div class="slide-title primary-font-title"><span>Mon evolution</span></div>                                                    
+                                                        <div class="slide-date"><span>03</span></div>
+                                                        <div class="slide-cat"><span>Service</span></div>                                           
                                                     </div>
                                                 </div>
                                             </div>
@@ -302,173 +312,10 @@ Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy
                             <!--/Row -->
                             
                                 
-                            <!-- Row -->
-                            <div class="content-row full  row_padding_left row_padding_right text-align-center dark-section" data-bgcolor="#0c0c0c">
-                            
-                                <h2 class="big-title primary-font-title"><span class="has-mask-fill">Partenaires et sponsors</span></h2>
-                                <p>WE DEVELOP GORGEOUS AND MEMORABLE <br class="destroy">des alliés engagés dans notre mission de former les super-héros de demain.</p>
-                                <hr><hr>
-                            </div> 
-                            <!--/Row -->
-
                            
-                               <!-- Row -->
-                            <div class="content-row text-align-center dark-section " data-bgcolor="#0c0c0c">
-                                
-                                
-                                <div class="moving-gallery fw-gallery">
-                                    <ul class="wrapper-gallery">
-                                        <li>
-                                            <img src="<?=base_url("assets/images/partenaire/partenaire2.png")?>">                                            
-                                        </li>
-                                        <li>
-                                            <img src="<?=base_url("assets/images/partenaire/partenaire8.png")?>">
-                                        </li>
-                                        <li>
-                                            <img src="<?=base_url("assets/images/partenaire/partenaire9.png")?>">
-                                        </li>
-                                        <li>
-                                            <img src="<?=base_url("assets/images/partenaire/partenaire4.png")?>">
-                                        </li>
-                                        <li>
-                                            <img src="<?=base_url("assets/images/partenaire/partenaire6.png")?>">
-                                        </li>
-                                    </ul>
-                                </div>
-                            
-                                <div class="moving-gallery bw-gallery">
-                                    <ul class="wrapper-gallery">
-                                        <li>
-                                            <img src="<?=base_url("assets/images/partenaire/partenaire7.png")?>">
-                                        </li>
-                                        <li>
-                                            <img src="<?=base_url("assets/images/partenaire/partenaire3.png")?>">
-                                        </li>
-                                        <li>
-                                            <img src="<?=base_url("assets/images/partenaire/partenaire5.png")?>">
-                                        </li>
-                                        <li>
-                                            <img src="<?=base_url("assets/images/partenaire/partenaire10.png")?>">
-                                        </li>
-                                        <li>
-                                            <img src="<?=base_url("assets/images/partenaire/partenaire1.png")?>">
-                                        </li>
-                                    </ul>
-                                </div>
-                            
-                            </div> 
-                            <!--/Row -->
-                            <hr><hr>
-                            <hr><hr>
-                            <!-- Row -->
-                            <div class="content-row full  row_padding_left row_padding_right text-align-center dark-section" data-bgcolor="#0c0c0c">
-                                
-                                <h2 class="big-title primary-font-title"><span class="has-mask-fill">Equipe</span></h2>
-                                <p>DÉCOUVREZ L'ÉQUIPE DÉVOUÉE DERRIÈRE LA CRÉATION DE NOTRE SITE.</p>
-                               
-                            </div> 
-                            <!--/Row -->
-
-                            <hr><hr>
-                            
-                            <!-- Row -->
-                            <div class="content-row full row_padding_bottom dark-section" data-bgcolor="#0c0c0c">
-                                
-                                <ul class="team-members-list" data-fx="1">
-                                    <li class="link has-hover-image" data-img="<?=base_url("assets/images/team1.jpg")?>">
-                                        <div class="team-member has-animation"><span>Rajaonasitera</span><div class="primary-font-title">Tatiana</div><span>Web Designer</span></div>
-                                    </li>
-                                    <li class="link has-hover-image" data-img="<?=base_url("assets/images/team2.jpg")?>">
-                                        <div class="team-member has-animation"><span>Razafinjoelina</span><div class="primary-font-title">Fitia</div><span>UX Designer</span></div>
-                                    </li>
-                                    <li class="link has-hover-image" data-img="<?=base_url("assets/images/team3.jpg")?>">
-                                        <div class="team-member has-animation"><span>Andrianarison</span><div class="primary-font-title">Mahery</div><span>Art Director</span></div>
-                                    </li>
-                                    <li class="link has-hover-image" data-img="<?=base_url("assets/images/team4.jpg")?>">
-                                        <div class="team-member has-animation"><span>Andrianandrasana</span><div class="primary-font-title">Dania</div><span>Developer</span></div>
-                                    </li>
-                                </ul>
-                                
-                            </div> 
-                            <!--/Row -->
-                                
-                            <!-- Row -->
-                            <!-- <div class="content-row full row_padding_left row_padding_right dark-section fadeout-element" data-bgcolor="#0c0c0c">
-                            
-                                <div class="list-rotator-wrapper">                                
-                                	<div class="list-rotator-title">OUR SKILLS COVER</div>                  
-                                    <div class="list-rotator-pin">                                    
-                                        <ul class="list-rotator primary-font-title">
-                                            <li class="">Web Design</li>
-                                            <li>Mobile App Development</li>
-                                            <li>UI/UX Design</li>
-                                            <li>SEO Optimization</li>
-                                            <li>Social Media Management</li>
-                                            <li>Data Analytics</li>
-                                            <li>Content Creation</li>
-                                        </ul>                                        
-                                    </div>                            
-                                </div>
-                                
-                            </div>  -->
-                            <!--/Row -->
-                            
-                            
-                            <!-- Row -->
-                            <div class="content-row dark-section text-align-center" data-bgcolor="#0c0c0c" style="color:black;">
-                           
-                           		<div class="one_third has-animation"  data-delay="100">
-                                    
-                                    <div class="box-icon-wrapper block-boxes">
-                                        <div class="box-icon">
-                                            <i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i>
-                                        </div>
-                                    	<div class="box-icon-content">
-                                            <h6 class="no-margins"><a href="projects.avanahub@gmail.com" class="link"><span>projects.avanahub@gmail.com</span></a></h6>
-                                            <p>Email</p>
-                                        </div>
-                                    </div> 
-                                                           
-                                </div>
-                                
-                                <div class="one_third has-animation"  data-delay="200">
-                                    
-                                    <div class="box-icon-wrapper block-boxes">
-                                        <div class="box-icon">
-                                            <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
-                                        </div>
-                                    	<div class="box-icon-content">
-                                            <h6 class="no-margins">Etech Anosivavaka</h6>
-                                            <p>Antananarivo Madagascar</p>
-                                        </div>
-                                    </div>
-                                                            
-                                </div>
-                                
-                                <div class=" one_third last has-animation"  data-delay="300">
-                                    
-                                    <div class="box-icon-wrapper block-boxes">
-                                        <div class="box-icon">
-                                            <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
-                                        </div>
-                                    	<div class="box-icon-content">
-                                            <h6 class="no-margins">+261 345459044</h6>
-                                            <p>Telephone</p>
-                                        </div>
-                                    </div>
-                                    
-                                </div> 
-                                                       
-                            </div> 
-                           <!--/Row -->
-                            
                         </div>
                         <!--/Main Page Content -->
                         
-                        <hr><hr> 
-                        
-                        <hr><hr>
-                       
                                 
                     </div>
                     <!--/Main Content --> 
@@ -477,7 +324,7 @@ Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy
                 <!--/Main -->
                 
                 <!-- Footer -->
-                <?php  $this->load->view('fo/content/footer'); ?>
+                <?php include("content/foot.php"); ?>
                 <!--/Footer -->
             
         
@@ -511,7 +358,8 @@ Knowhere, L'ACADÉMIE DES SUPER-HÉROS VOUS OUVRE SES PORTES !<br class="destroy
     <div id="rotate-device"></div>
     
     
-    <?php  $this->load->view('fo/content/footer'); ?>
+    <?php include("content/footer.php"); ?>
+   
 
 </body>
 

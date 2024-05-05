@@ -18,11 +18,11 @@
                             <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
                             <div class="socials-text">Contactez nous</div>
                             <ul class="socials">
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="#" target="_blank">Db</a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="#" target="_blank">Tw</a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="#" target="_blank">Be</a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="#" target="_blank">Fb</a></span></li>
-                                <li><span class="parallax-wrap"><a class="parallax-element" href="#">In</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element"  target="_blank">Db</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element"  target="_blank">Tw</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element"  target="_blank">Be</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element"  target="_blank">Fb</a></span></li>
+                                <li><span class="parallax-wrap"><a class="parallax-element" >In</a></span></li>
                             </ul>                
                         </div>
                         

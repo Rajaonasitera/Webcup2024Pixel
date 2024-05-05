@@ -7,7 +7,11 @@
                     <a class="ajax-link" data-type="page-transition" href="<?=site_url("/")?>">
                         <img class="black-logo" src="<?=base_url("assets/images/logo/knowherelogo.png")?>" style="width:100px;height:20px;">
                         <img class="white-logo" src="<?=base_url("assets/images/logo/knowherelogoblanc.png")?> " style="width:100px;height:20px;">
-                    </a>       
+                    </a>  
+                    <br>
+                    <br>
+                    
+  
                 </div>
                 <!--/Logo -->
                             
@@ -24,9 +28,12 @@
                                             <li><a class="ajax-link" href="index-showcase-gallery.html" data-type="page-transition">Archive Gallery</a></li> 
                                         </ul> -->
                                     </li>
-                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="<?=site_url("/fo/welcome")?>"><div class="before-span"><span data-hover="Home">Home</span></div></a></li>
-                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="<?=site_url("/fo/connexion")?>"><div class="before-span"><span data-hover="Dashboard">Dashboard</span></div></a></li>
-                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="<?=site_url("/fo/connexion")?>"><div class="before-span"><span data-hover="Qui suis je?">Qui suis je?</span></div></a></li>
+                                    <!-- <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="<?=site_url("/fo")?>"><div class="before-span"><span data-hover="Accueil">Accueil</span></div></a></li> -->
+                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="<?=site_url("/fo")?>"><div class="before-span"><span data-hover="Dashboard">Dashboard</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="<?=site_url("/fo/welcome/apropos")?>"><div class="before-span"><span data-hover="A propos">A propos</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="<?=site_url("/fo/fonctionnalite/f1")?>"><div class="before-span"><span data-hover="Qui suis je?">Qui suis je?</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="<?=site_url("/fo/fonctionnalite/f2")?>"><div class="before-span"><span data-hover="Formation">Formation</span></div></a></li>
+                                    <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="<?=site_url("/fo/fonctionnalite/f3")?>"><div class="before-span"><span data-hover="Progression">Progression</span></div></a></li>
                                     <!-- <li class="link menu-timeline"><a class="ajax-link" data-type="page-transition" href="contact.html"><div class="before-span"><span data-hover="Contact">Fonctionnalite</span></div></a></li> -->
                                     <!-- <li class="link menu-timeline"><a class="" href="#"><div class="before-span"><span data-hover="Fonctionnalite">Fonctionnalite</span></div></a>
                                         <ul>

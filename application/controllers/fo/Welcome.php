@@ -23,5 +23,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('fo/index');
 		
+	}	
+	public function apropos()
+	{
+		$this->load->view('fo/apropos');
+		
 	}		
 }

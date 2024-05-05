@@ -1,8 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-require('/../BaseSessionController.php');
 
-class Fonctionnalite extends BaseSessionController {
+class Fonctionnalite extends CI_Controller {
 
 	public function __construct(){
         parent::__construct();
@@ -25,6 +24,6 @@ class Fonctionnalite extends BaseSessionController {
     public function f3()
 	{
 		
-		$this->load->view('fo/service/service3');
+		redirect(base_url().'index.php/fo/evolutionCtrl/myEvolution/');
 	}	
 }

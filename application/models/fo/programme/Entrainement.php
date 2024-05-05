@@ -8,7 +8,12 @@ class Entrainement extends CI_Model {
         parent::__construct();
     }
 
-   // PRENDRE MA NOTE
+    // PRENDRE MA LISTE DE PROGRAMME
+    public function getListProgrammesFaits($id_client){
+        
+    }
+
+   // PRENDRE LES EXERCICES D'UN SERVICE
     public function getMyDetailsExercice($id_programme){
         $this->db->select('*');
         $this->db->from('exercice');
